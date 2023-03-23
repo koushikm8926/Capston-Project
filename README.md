@@ -1,9 +1,24 @@
+
+<p align="center">
+ <img src="https://i.imgur.com/rSyq3MW.png" alt="The Documentation Compendium"></a>
+</p>
+
+<h3 align="center">The Documentation Compendium</h3>
+
+<div align="center">
+
+
+  [![Status](https://img.shields.io/badge/status-active-success.svg)]()
+  [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/koushikm8926/Capston-Project/pulls)
+
+
+<!--   <a href="https://www.producthunt.com/posts/the-documentation-compendium?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-the-documentation-compendium" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=157965&theme=dark&period=daily" alt="The Documentation Compendium - Beautiful README templates that people want to read. | Product Hunt Embed" style="width: 250px; height: 54px;" width="250px" height="54px" /></a> -->
+
+</div>
+
 # Capston-project
 > Short blurb about what your product does.
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
 
 This Repo is created under final year capston project.
 
