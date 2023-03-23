@@ -17,8 +17,8 @@ export default function Onboard({navigation}){
             </View> 
            
             <View style={styles.view2}>
-                <Text style={styles.text2} >Request for </Text>
-                <Text style={styles.text2}>an ambulance!</Text>
+                <Text style={styles.text1} >Saving Lives </Text>
+                <Text style={styles.text2}>At One CLick!</Text>
             </View>
 
             <View style={{marginTop:50, justifyContent:"center",alignItems:"center",}}>
@@ -64,6 +64,12 @@ const styles = StyleSheet.create({
     text2:{
         fontSize:34,
         fontWeight:'bold', 
+        color:'blue',
+    },
+    text1:{
+        fontSize:34,
+        fontWeight:'bold', 
+        color:'red',
     }
 
 })
