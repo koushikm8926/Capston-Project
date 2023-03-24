@@ -1,13 +1,4 @@
 
-
-
-
-
-
-
-
-
-
 <p align="center">
  <img src="https://i.imgur.com/rSyq3MW.png" alt="The Documentation Compendium"></a>
 </p>
@@ -26,7 +17,16 @@
 # Capston-project
 > Short blurb about what your product does.
 
+
+[![NPM Version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Downloads Stats][npm-downloads]][npm-url]
+
+This Repo is created under final year capston project.We are developing an ambulance tracking application.
+
+=======
 This Repo is created under final year capston project.
+
 
 <!-- GETTING STARTED -->
 ## Getting Started
