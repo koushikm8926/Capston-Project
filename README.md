@@ -24,8 +24,7 @@
 
 This Repo is created under final year capston project.We are developing an ambulance tracking application.
 
-=======
-This Repo is created under final year capston project.
+
 
 
 <!-- GETTING STARTED -->
