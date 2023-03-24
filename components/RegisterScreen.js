@@ -39,7 +39,7 @@ export default function Register({navigation}){
             paddingBottom:8,
             marginBottom:25,
              }}>
-            <Ionicons name="" size={20} color="grey" style={{marginRight:10,padding:5,}}></Ionicons>
+            <Ionicons name="phone-portrait-outline" size={20} color="grey" style={{marginRight:10,padding:5,}}></Ionicons>
             <TextInput placeholder="Number" style={{paddingVertical:0,flex:1,}}  keyboardType="number-pad" />   
         </View>
 
@@ -65,7 +65,7 @@ export default function Register({navigation}){
             <TextInput placeholder="Password" style={{paddingVertical:0,flex:1,}}  secureTextEntry={true} />   
         </View>
 
-        <TouchableOpacity onPress={()=>{}} style={styles.loginButton}>
+        <TouchableOpacity onPress={()=> navigation.navigate("Login")} style={styles.loginButton}>
                 <Text style={styles.loginText}>Register</Text>
         </TouchableOpacity>      
 
