@@ -5,6 +5,7 @@ import Login from './components/login';
 import Onboard from './components/onboard';
 import Register from './components/RegisterScreen';
 import Emergency from './components/emergency';
+import DetailsPage from './components/manual_ambulance_booking';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +18,7 @@ export default function Navigation() {
         <Stack.Screen name="Emergency" component={Emergency} options={{headerShown: false}}  />
         <Stack.Screen name="Login" component={Login} options={{headerShown: false}}  />
         <Stack.Screen name="Register" component={Register} options={{headerShown: false}}  />
+        <Stack.Screen name='DetailsPage' component={DetailsPage} options={{headerShown: false}} ></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );

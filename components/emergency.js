@@ -1,7 +1,12 @@
 import { View,Text,StyleSheet,TouchableOpacity } from "react-native";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Geolocation from 'react-native-geolocation-service';
+import { PermissionsAndroid } from 'react-native';
+import SmsAndroid from 'react-native-sms';
+import React, { useState} from 'react';
 
 export default function Emergency({navigation}){
+   
     return(
 
 <View>
@@ -10,7 +15,7 @@ export default function Emergency({navigation}){
         </View>
 
         <View style={{justifyContent:'center',alignItems:"center",marginTop:30,}}>
-              <TouchableOpacity>
+              <TouchableOpacity >
                 <View style={{backgroundColor:'red', height:150,width:150,borderRadius:80,justifyContent:'center',alignItems:"center", }}>
                 <Icon name="hospital" size={100} color="white" />
                 </View>

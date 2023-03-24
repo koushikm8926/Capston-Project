@@ -43,7 +43,7 @@ export default function Login({navigation}){
             <Text style={{fontWeight:"700", color:"#42DAFF"}}>Forgot?</Text>
             </TouchableOpacity>   
         </View>
-        <TouchableOpacity onPress={()=>{}} style={styles.loginButton}>
+        <TouchableOpacity onPress={()=>navigation.navigate('DetailsPage')} style={styles.loginButton}>
                 <Text style={styles.loginText}>Login</Text>
         </TouchableOpacity>      
         <Text style={{textAlign:"center", marginBottom:30,}}>Or</Text>       
