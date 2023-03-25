@@ -13,7 +13,7 @@ export default function Navigation() {
 
   return (
     <NavigationContainer>
-    <Stack.Navigator initialRouteName="Onboard" >
+    <Stack.Navigator initialRouteName="Register" >
         <Stack.Screen name="Onboard" component={Onboard} options={{headerShown: false}}/>
         <Stack.Screen name="Emergency" component={Emergency} options={{headerShown: false}}/>
         <Stack.Screen name="Login" component={Login} options={{headerShown: false}}/>
