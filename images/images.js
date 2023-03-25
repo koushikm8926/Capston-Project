@@ -1,0 +1,1 @@
+export {default as avtar} from "./avtar.jpeg"

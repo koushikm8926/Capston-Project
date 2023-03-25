@@ -23,18 +23,10 @@ export default function Onboard({navigation}){
 
             <View style={{marginTop:50, justifyContent:"center",alignItems:"center",}}>
                
-                <View style={{
-                    backgroundColor:"black", 
-                    justifyContent:"center",
-                    alignItems:"center",
-                    height: 60,
-                    width: 60,
-                    borderRadius: 30, }}>
-                <TouchableOpacity onPress={() => navigation.navigate('Emergency')}>
+                <TouchableOpacity style={styles.TouchableOpacity} onPress={() => navigation.navigate('Emergency')}>
                 <Ionicons name="arrow-forward" size={20} color="white"></Ionicons>
                 </TouchableOpacity>
-                </View>
-
+              
             </View>   
         </SafeAreaView>
     );
@@ -70,6 +62,14 @@ const styles = StyleSheet.create({
         fontSize:34,
         fontWeight:'bold', 
         color:'red',
+    },
+    TouchableOpacity:{
+        backgroundColor:"black", 
+                    justifyContent:"center",
+                    alignItems:"center",
+                    height: 60,
+                    width: 60,
+                    borderRadius: 30,
     }
 
 })
