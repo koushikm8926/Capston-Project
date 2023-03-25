@@ -1,4 +1,4 @@
-import { View,StyleSheet,Image,Text, TouchableOpacity } from "react-native";
+import { View,StyleSheet,Image,Text, TouchableOpacity} from "react-native";
 import { avtar } from "../images/images";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
@@ -49,6 +49,23 @@ export default function Emergency({navigation}){
             <Text style={{marginTop:10, color:'grey', fontSize:15,}}>Pick the subject to chat</Text>
         </View>
 
+     
+        <View style={{flexDirection:'row', marginTop:20,}}>
+          
+            <View style={{backgroundColor:'grey',marginLeft:10,borderRadius:20, height:100, width:150,}}>
+                <Text>hello</Text>
+            </View>
+
+            <View style={{backgroundColor:'grey',marginLeft:10,borderRadius:20, height:100, width:150,}}>
+                <Text>hello</Text>
+            </View>
+            
+            <View style={{backgroundColor:'grey',marginLeft:10,borderRadius:20, height:100, width:150,}}>
+                <Text>hello</Text>
+            </View>
+            
+        </View>
+      
 
 </View>
 
