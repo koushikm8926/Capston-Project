@@ -1,30 +1,25 @@
 import { StyleSheet } from "react-native"
-
 const styles = StyleSheet.create({
+    TextInput:{
+        paddingVertical:0,
+        flex:1,
+    },
+    loginText:{
+        fontSize:28,
+        fontWeight:"500", 
+        marginBottom:30,
+    },
     lastview:{
         flexDirection:"row", 
         justifyContent:"center", 
         marginBottom:30,
     },
-    Icons:{
-        marginRight:10,
-        padding:5,
-    },
-    registertext:{
-        fontSize:28,
-        fontWeight:"500", 
-        marginBottom:30,
-    },
-    textinput:{
-        paddingVertical:0,
-        flex:1,
-    },
     inputview:{
         flexDirection:"row",
-        borderBottomColor:"#ccc",
-        borderBottomWidth:1,
-        paddingBottom:8,
-        marginBottom:25,
+            borderBottomColor:"#ccc",
+            borderBottomWidth:1,
+            paddingBottom:8,
+            marginBottom:25,
     },
     loginButton:{
          backgroundColor:"#42DAFF",
@@ -33,7 +28,7 @@ const styles = StyleSheet.create({
          borderRadius:10,
          marginBottom:30,
     },
-    loginText:{
+    loginbuttonText:{
                 fontWeight:"700", 
                 fontSize:16,
                 textAlign:"center",
