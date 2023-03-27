@@ -6,18 +6,19 @@ import Register from './components/RegisterScreen';
 import { NavigationContainer } from '@react-navigation/native';
 import DetailsPage from './components/manual_ambulance_booking';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
+import Home from './components/home';
 const Stack = createNativeStackNavigator();
 
 export default function Navigation() {
 
   return (
     <NavigationContainer>
-    <Stack.Navigator initialRouteName="Register" >
+    <Stack.Navigator initialRouteName="Onboard" >
         <Stack.Screen name="Onboard" component={Onboard} options={{headerShown: false}}/>
         <Stack.Screen name="Emergency" component={Emergency} options={{headerShown: false}}/>
         <Stack.Screen name="Login" component={Login} options={{headerShown: false}}/>
         <Stack.Screen name="Register" component={Register} options={{headerShown: false}}/>
+        <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>
         <Stack.Screen name='DetailsPage' component={DetailsPage} options={{headerShown: false}}/>
       </Stack.Navigator>
     </NavigationContainer>
