@@ -1,4 +1,4 @@
-import { View,StyleSheet,Image,Text, TouchableOpacity} from "react-native";
+import { View,StyleSheet,Image,Text, TouchableOpacity, ScrollView} from "react-native";
 import { avtar } from "../images/images";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
@@ -51,7 +51,9 @@ export default function Emergency({navigation}){
 
      
         <View style={{flexDirection:'row', marginTop:20,}}>
-          
+        <ScrollView
+            horizontal={true}
+            showsHorizontalScrollIndicator={false}>  
             <View style={{backgroundColor:'grey',marginLeft:10,borderRadius:20, height:100, width:150,}}>
                 <Text>hello</Text>
             </View>
@@ -63,10 +65,9 @@ export default function Emergency({navigation}){
             <View style={{backgroundColor:'grey',marginLeft:10,borderRadius:20, height:100, width:150,}}>
                 <Text>hello</Text>
             </View>
+            </ScrollView>
             
-        </View>
-      
-
+        </View>   
 </View>
 
 

@@ -7,6 +7,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import DetailsPage from './components/manual_ambulance_booking';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './components/home';
+
 const Stack = createNativeStackNavigator();
 
 export default function Navigation() {

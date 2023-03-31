@@ -10,7 +10,8 @@ export {default as question} from "./question.png"
 export {default as medicine} from "./medicine.png"
 export {default as Ambulance} from "./Ambulance.png"
 export {default as notification} from "./notification.png"
-
+export {default as profile} from "./profile.png"
+export {default as self} from "./self.png"
 
 
 
