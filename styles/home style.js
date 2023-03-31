@@ -3,11 +3,15 @@ import {StyleSheet} from 'react-native';
 const styleHome = StyleSheet.create({
     container: {
             flex: 1,
-            color: 'black',
-            backgroundColor: 'whitesmoke'
+            marginTop:30,
+          },
+          vmain:{
+            justifyContent:'center',
+            alignItems:'center',
           },
           view1: {
             height: 200,
+            width:400,
             backgroundColor: '#a3c7c7',
             borderBottomLeftRadius: 170,
           },
@@ -26,7 +30,7 @@ const styleHome = StyleSheet.create({
             borderRadius: 50,
           },
           hello: {
-            marginLeft: 25,
+            marginRight:150,
             marginTop: 30,
             fontSize: 20,
             fontWeight: 'bold',
@@ -37,7 +41,7 @@ const styleHome = StyleSheet.create({
           innerView1: {
             height: 120,
             width: 150,
-            marginLeft: 30,
+            marginLeft: 5,
             marginTop: 20,
             borderBottomLeftRadius: 20,
             borderTopLeftRadius: 20,
@@ -57,7 +61,7 @@ const styleHome = StyleSheet.create({
           innerView2: {
             height: 120,
             width: 150,
-            marginLeft: 30,
+            marginLeft: 5,
             marginTop: 20,
             borderBottomLeftRadius: 20,
             borderTopLeftRadius: 20,
@@ -69,7 +73,7 @@ const styleHome = StyleSheet.create({
           innerView3: {
             height: 120,
             width: 150,
-            marginLeft: 30,
+            marginLeft: 5,
             marginTop: 20,
             borderTopLeftRadius: 20,
             borderTopRightRadius: 20,
@@ -81,7 +85,7 @@ const styleHome = StyleSheet.create({
           innerView4: {
             height: 120,
             width: 150,
-            marginLeft: 210,
+            marginLeft: 190,
             marginTop: -400,
             borderTopLeftRadius: 20,
             borderTopRightRadius: 20,
@@ -93,8 +97,8 @@ const styleHome = StyleSheet.create({
           innerView5: {
             height: 120,
             width: 150,
-            marginLeft: 210,
-            marginTop: 20,
+            marginLeft: 190,
+            marginTop: -260,
             borderTopLeftRadius: 20,
             borderTopRightRadius: 20,
             borderBottomRightRadius: 20,
@@ -105,8 +109,8 @@ const styleHome = StyleSheet.create({
           innerView6: {
             height: 120,
             width: 150,
-            marginLeft: 210,
-            marginTop: 20,
+            marginLeft: 190,
+            marginTop: -120,
             borderTopLeftRadius: 20,
             borderTopRightRadius: 20,
             borderBottomRightRadius: 20,
