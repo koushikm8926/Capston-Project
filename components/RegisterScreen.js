@@ -52,7 +52,7 @@ export default function Register({navigation}){
 
             <View style={styles.lastview}>
             <Text>Already have an account ?</Text>
-            <TouchableOpacity onPress={() => navigation.goBack()}>
+            <TouchableOpacity onPress={()=> navigation.navigate("Login")}>
             <Text style={styles.register} >Login</Text>
             </TouchableOpacity>
             </View>
