@@ -12,11 +12,11 @@ import {profile} from '../images/images.js';
 import styleHome from '../styles/home style.js';
 
 
-export default class Home extends Component {
+export default function Home ({navigation}) {
   state = {
     isVisible: false, 
   }
-  render() {
+ 
     return (
       <SafeAreaView style={styleHome.container}>
         <View style={styleHome.vmain}>
@@ -126,4 +126,3 @@ export default class Home extends Component {
       </SafeAreaView>
     )
   }
-}
