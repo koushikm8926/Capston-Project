@@ -9,11 +9,11 @@ import { siren } from '../images/images.js';
 import { medikit } from '../images/images.js';
 import { avtar } from '../images/images.js';
 
-export default class Home extends Component {
+export default function Home ({navigation}) {
   state = {
     isVisible: false, 
   }
-  render() {
+ 
     return (
       <SafeAreaView style={styleHome.container}>
         <Modal
@@ -114,4 +114,3 @@ export default class Home extends Component {
       </SafeAreaView>
     )
   }
-}
