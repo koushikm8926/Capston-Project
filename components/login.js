@@ -15,8 +15,8 @@ import { Ambulance } from "../images/images";
 
 export default function Login({navigation}){
     return(
-    <SafeAreaView style={{flex:1,justifyContent:"center",}}>   
-        <View style={{marginHorizontal:25}}>
+    <SafeAreaView style={{flex:1,justifyContent:'center', alignItems:'center'}}>   
+        <View style={{marginHorizontal:25, }}>
         
         <View style={{alignItems:"center"}}>    
         <Image  style={{width: 300, height: 300}} source={Ambulance} />
@@ -31,7 +31,7 @@ export default function Login({navigation}){
 
         <View style={styles.inputview}>
         <Ionicons name="ios-lock-closed" size={20} color="blue" style={{marginRight:10,padding:5,}}/>
-        <TextInput placeholder="Password" style={styles.TextInput}  secureTextEntry={true} />
+        <TextInput placeholder="Password" style={styles.TextInput1}  secureTextEntry={true} />
         <TouchableOpacity onPress={()=>{}}>
         <Text style={{fontWeight:"700", color:"#42DAFF"}}>Forgot?</Text>
         </TouchableOpacity>   
