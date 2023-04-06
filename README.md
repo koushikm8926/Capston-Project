@@ -22,7 +22,7 @@
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 
-This Repo is created under final year capston project.We are developing an ambulance tracking application and sos features during critical needs.
+This Repo is created under final year capston project. We are developing an ambulance tracking application and sos features during critical needs.
 
 
 
