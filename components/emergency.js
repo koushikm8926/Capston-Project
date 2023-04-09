@@ -1,9 +1,9 @@
 import { View,StyleSheet,Image,Text, TouchableOpacity, ScrollView} from "react-native"; 
 import { avtar } from "../images/images"; 
-import {streacher} from "../images/images"; 
-import {finger_cut} from "../images/images"; 
-import {itching_person} from "../images/images"; 
-import { smallpox_person } from "../images/images"; 
+// import {streacher} from "../images/images"; 
+// import {finger_cut} from "../images/images"; 
+// import {itching_person} from "../images/images"; 
+// import { smallpox_person } from "../images/images"; 
 import Ionicons from "react-native-vector-icons/Ionicons"; 
 import MaterialIcons from "react-native-vector-icons/MaterialIcons"; 
  
@@ -11,8 +11,7 @@ import MaterialIcons from "react-native-vector-icons/MaterialIcons";
 export default function Emergency({navigation}){ 
     
     return( 
-<View  
-style={{backgroundColor:'#eff2f9', justifyContent:'center', alignItems:'center' }} 
+<View style={{backgroundColor:'#eff2f9', justifyContent:'center', alignItems:'center' }} 
 > 
     <View  style={{marginTop:50, flexDirection:'row',  }}> 
         <View > 
@@ -42,11 +41,11 @@ style={{backgroundColor:'#eff2f9', justifyContent:'center', alignItems:'center' 
             <Text style={styles.text}>needed!</Text> 
         </View> 
  
-        <View style={styles.view3}> 
+        <View style={styles.view3} > 
             <Text style={{fontSize:15, fontWeight:'300', color:'grey',}}>just hold the button to call</Text> 
         </View> 
  
-        <View style={{marginTop:20,alignItems:'center',}}> 
+        <View style={{marginTop:20,alignItems:'center',}} > 
             <TouchableOpacity style={{height:200, width:200, borderRadius:100,backgroundColor:'#fa4b4a', justifyContent:'center',alignItems:'center',}}> 
             <Ionicons name="call" size={100} color="white"  style={{marginRight:10,padding:5, color:'white', }}></Ionicons> 
             </TouchableOpacity> 
@@ -59,6 +58,7 @@ style={{backgroundColor:'#eff2f9', justifyContent:'center', alignItems:'center' 
  
       
         <View style={{flexDirection:'row', marginTop:30, width:400 }}> 
+
         <ScrollView 
             horizontal={true} 
             showsHorizontalScrollIndicator={false}>  

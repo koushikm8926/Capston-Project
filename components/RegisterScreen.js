@@ -8,7 +8,7 @@ import MaterialIcons from "react-native-vector-icons/MaterialIcons";
  
 export default function Register({navigation}){ 
     return( 
-    <SafeAreaView style={{flex:1,justifyContent:"center", alignItems:'center'}}>    
+    <SafeAreaView style={{flex:1,}}>    
         <View style={{marginHorizontal:25}}> 
              
             <View style={{alignItems:"center"}}>     
