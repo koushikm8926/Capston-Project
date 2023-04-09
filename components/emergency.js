@@ -46,7 +46,7 @@ export default function Emergency({navigation}){
         </View> 
  
         <View style={{marginTop:50,alignItems:'center',}} > 
-        <View style={{ borderBottomColor:'red', borderBottomWidth:2, borderRightColor:'blue', borderRightWidth:3, borderRadius:110,  borderTopColor:'blue', borderTopWidth:3, height:215, width:215,justifyContent:'center', alignItems:'center'}}>
+        <View style={{ borderBottomColor:'red', borderBottomWidth:3, borderRightColor:'blue', borderRightWidth:3, borderRadius:110,  borderTopColor:'blue', borderTopWidth:3, height:215, width:215,justifyContent:'center', alignItems:'center'}}>
             <Animatable.View  animation={"pulse"} easing="ease-in-out" iterationCount={"infinite"}>
                 <TouchableOpacity style={{height:200, width:200, borderRadius:100,backgroundColor:'#fa4b4a', justifyContent:'center',alignItems:'center',}}> 
                 <Ionicons name="call" size={100} color="white"  style={{marginRight:10,padding:5, color:'white', }}></Ionicons> 

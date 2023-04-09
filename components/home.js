@@ -10,28 +10,27 @@ import { avtar } from '../images/images.js';
 import {self} from '../images/images.js'; 
 import {profile} from '../images/images.js'; 
 import styleHome from '../styles/home style.js'; 
+
+
+export default function Home ({navigation}) { 
+  //state = {  isVisible: false,} 
+  
  
- 
-export default class Home extends Component { 
-  state = { 
-    isVisible: false,  
-  } 
-  render() { 
     return ( 
       <SafeAreaView style={styleHome.container}> 
         <View style={{justifyContent:'center', alignItems:'center'}}> 
-        <Modal 
+        {/* <Modal 
           animationType={"slide"} 
           transparent={true} 
-          visible={this.state.isVisible}> 
- 
-<View style={styleHome.modal}> 
+          visible={this.state.isVisible}>  */}
+{/*  
+  <View style={styleHome.modal}> 
           <View style={{justifyContent:'center', alignItems:'center'}} > 
      
              
-            <TouchableOpacity onPress={() => { 
-              this.setState({ isVisible: !this.state.isVisible }) 
-            }}> 
+            <TouchableOpacity 
+            //onPress={() => { this.setState({ isVisible: !this.state.isVisible })}}
+            > 
               <Text style={styleHome.modalHeaderCloseText}>X</Text> 
             </TouchableOpacity> 
   <Text style={styleHome.modalText}>Calling an ambulance for...</Text> 
@@ -51,17 +50,19 @@ export default class Home extends Component {
             <Text style={styleHome.modalText3}>Others</Text> 
            
           <View style={styleHome.buttonStyle}> 
-            <TouchableOpacity onPress={()=>navigation.navigate('Doctor')}> 
+            <TouchableOpacity 
+            //onPress={()=>navigation.navigate('Doctor')}
+            > 
               <Text style={styleHome.modalText4}>OK</Text> 
             </TouchableOpacity> 
-            <TouchableOpacity onPress={() => { 
-              this.setState({ isVisible: !this.state.isVisible }) 
-            }}> 
+            <TouchableOpacity
+             //onPress={() => {  this.setState({ isVisible: !this.state.isVisible }) }}
+            > 
               <Text style={styleHome.modalText5}>Cancel</Text> 
             </TouchableOpacity> 
           </View> 
-        </View> 
-        </Modal> 
+        </View>  */}
+        {/* /</Modal>  */}
  
         <View style={styleHome.view1}> 
  
@@ -73,7 +74,9 @@ export default class Home extends Component {
  
         <View style={styleHome.view2}> 
  
-            <TouchableOpacity onPress={() => { this.setState({ isVisible: true }) }}> 
+            <TouchableOpacity 
+            //onPress={() => { this.setState({ isVisible: true }) }}
+            > 
           <View style={styleHome.innerView1}> 
               <Image source={medikit} style={styleHome.image} ></Image> 
             <Text style={styleHome.text}>Find a Doctor</Text> 
@@ -81,7 +84,10 @@ export default class Home extends Component {
           </View> 
               </TouchableOpacity> 
  
-            <TouchableOpacity onPress={ ()=>{ this.setState({ isVisible: true })}}> 
+            <TouchableOpacity 
+            //
+            //onPress={ ()=>{ this.setState({ isVisible: true })}}
+              > 
           <View style={styleHome.innerView2} > 
               <Image source={siren} style={styleHome.image} ></Image> 
             <Text style={styleHome.text}>Ambulance</Text> 
@@ -89,14 +95,20 @@ export default class Home extends Component {
           </View> 
               </TouchableOpacity> 
  
-            <TouchableOpacity onPress={() => { this.setState({ isVisible: true }) }}> 
+            <TouchableOpacity 
+            //onPress={() => { this.setState({ isVisible: true }) }}
+            onPress={()=> navigation.navigate("ContactUs")}
+            > 
           <View style={styleHome.innerView3} > 
+          
               <Image source={Message} style={styleHome.image} ></Image> 
             <Text style={styleHome.text}>Message</Text> 
           </View> 
               </TouchableOpacity> 
  
-            <TouchableOpacity onPress={() => { this.setState({ isVisible: true }) }}> 
+            <TouchableOpacity 
+            //onPress={() => { this.setState({ isVisible: true }) }}
+            > 
           <View style={styleHome.innerView4} > 
               <Image source={Labtest} style={styleHome.image} ></Image> 
             <Text style={styleHome.text}>Lab Test</Text> 
@@ -104,7 +116,9 @@ export default class Home extends Component {
           </View> 
               </TouchableOpacity> 
  
-            <TouchableOpacity onPress={() => { this.setState({ isVisible: true }) }}> 
+            <TouchableOpacity 
+            //onPress={() => { this.setState({ isVisible: true }) }}
+            > 
           <View style={styleHome.innerView5} > 
               <Image source={medicine} style={styleHome.image} ></Image> 
             <Text style={{ fontWeight: 'bold' }}>Medicines</Text> 
@@ -112,7 +126,9 @@ export default class Home extends Component {
           </View> 
               </TouchableOpacity> 
  
-            <TouchableOpacity onPress={() => { this.setState({ isVisible: true }) }}> 
+            <TouchableOpacity 
+            //onPress={() => { this.setState({ isVisible: true }) }}
+            > 
           <View style={styleHome.innerView6} > 
               <Image source={question} style={styleHome.image} ></Image> 
             <Text style={styleHome.text}>Help</Text> 
@@ -124,4 +140,3 @@ export default class Home extends Component {
       </SafeAreaView> 
     ) 
   } 
-}
