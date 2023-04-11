@@ -82,7 +82,7 @@ export default function Emergency({navigation}){
                 {/* <Image source={finger_cut} style={{height:35, width:35, marginLeft:110, marginTop:-30}}></Image>   */}
  
             </View> 
-            </TouchableOpacity>  
+            </TouchableOpacity>
              
             <TouchableOpacity>  
             <View style={{backgroundColor:'white',marginLeft:10,borderRadius:20, height:110, width:150,}}> 
