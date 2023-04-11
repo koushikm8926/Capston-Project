@@ -1,14 +1,7 @@
 import React, { Component } from 'react'; 
 import { View, Text, SafeAreaView, Image, TouchableOpacity,  Modal,  } from 'react-native'; 
-import { question } from '../images/images.js'; 
-import { medicine } from '../images/images.js'; 
-import { Labtest } from '../images/images.js'; 
-import { Message } from '../images/images.js'; 
-import { siren } from '../images/images.js'; 
-import { medikit } from '../images/images.js'; 
-import { avtar } from '../images/images.js'; 
-import {self} from '../images/images.js'; 
-import {profile} from '../images/images.js'; 
+import { question, medicine, Labtest, Message, siren, medikit, avtar, self, profile,  } from '../images/images.js'; 
+
 import styleHome from '../styles/home style.js'; 
 
 
