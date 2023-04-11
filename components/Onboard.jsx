@@ -2,12 +2,7 @@ import React from "react";
 import { Ambulance } from "../images/images";
 import { styles } from "../styles/on-board-style";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import { View,
-         Text, 
-         StyleSheet,
-         TouchableOpacity,
-         SafeAreaView, 
-         Image} from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, SafeAreaView, Image} from "react-native";
 
 export default function Onboard({navigation}){
     return(
