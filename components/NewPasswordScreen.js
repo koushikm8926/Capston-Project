@@ -7,45 +7,34 @@ const Forgot = ({ navigation }) => {
   const [code, setCode] = useState("");
   const [newPassword, setNewPassword] = useState("");
 
-  const onsubmit = () => {
-    console.warn("Submit button pressed");
-    // navigation.navigate('SignIn')
-  };
   const onBackToSignIn = () => {
     console.warn("Go to LogIn");
     navigation.navigate('Login')
   };
-  const onVerify = () => {
-    console.warn('Verify button pressed')
-    navigation.navigate('NewPassword')
+  const onConfirm = () => {
+    console.warn('Your Password changed')
+    navigation.navigate('Login')
   };
 
   return (
     <View style={styles.root}>
       <Text style={styles.title}>Reset your password</Text>
-      <Text style={{ marginVertical: 5 }}>Email*</Text>
+      <Text style={{ marginVertical: 5 }}>New Password*</Text>
       <Input
-        placeholder="Entert your Email"
+        placeholder="Entert your Password"
         value={code}
         setValue={setCode}
       />
-      <Buttons
-        title="Submit"
-        backgroundColor="#f0cf65"
-        onPress={onsubmit}
-        color="white"
-        style={{ marginVertical: 5 }}
-      />
-      <Text style={{ marginVertical: 5 }}>Verification Code*</Text>
+      <Text style={{ marginVertical: 5 }}>Confirm Password*</Text>
       <Input
-        placeholder="Entert your verification code"
+        placeholder="Confirm Your Password"
         value={newPassword}
         setValue={setNewPassword}
       />
       <Buttons
-        title="Verify"
+        title="Confirm"
         backgroundColor="#f0cf65"
-        onPress={onVerify}
+        onPress={onConfirm}
         color="white"
         style={{ marginVertical: 5 }}
       />

@@ -49,10 +49,9 @@ export default function Login({ navigation }) {
             style={styles.TextInput}
             secureTextEntry={true}
           />
-          <TouchableOpacity onPress={() => {}}>
+          <TouchableOpacity onPress={() => navigation.navigate("Forgot")}>
             <Text
               style={{ fontWeight: "700", color: "#42DAFF" }}
-              onPress={() => navigation.navigate("Forgot")}
             >
               Forgot?
             </Text>

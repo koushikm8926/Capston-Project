@@ -13,6 +13,7 @@ import ContactUs from './components/contactUs';
 import { useEffect, useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Forgot from './components/ForgotScreen';
+import NewPassword from './components/NewPasswordScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -46,6 +47,7 @@ export default function Navigation() {
         <Stack.Screen name='DetailsPage' component={DetailsPage} options={{headerShown: false}}/>
         <Stack.Screen name='ContactUs' component={ContactUs} options={{headerShown: false}}/>
         <Stack.Screen name='Forgot' component={Forgot} ></Stack.Screen>
+        <Stack.Screen name='NewPassword' component={NewPassword}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
     </TailwindProvider>
