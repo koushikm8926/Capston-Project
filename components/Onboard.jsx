@@ -6,7 +6,7 @@ import { View, Text, StyleSheet, TouchableOpacity, SafeAreaView, Image} from "re
 
 export default function Onboard({navigation}){
     return(
-        <SafeAreaView>   
+        <SafeAreaView >   
 
             <View style={styles.view1}>
             <Text style={styles.ambulance}>Ambulance</Text>

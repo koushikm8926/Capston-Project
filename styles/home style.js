@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 const styleHome = StyleSheet.create({
     container: {
             flex: 1,
-            marginTop:35,
+            backgroundColor:'#ebf1fc',
           },
           vmain:{
             justifyContent:'center',

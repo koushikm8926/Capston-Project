@@ -15,7 +15,7 @@ import { Ambulance } from "../images/images";
 
 export default function Login({navigation}){
     return(
-    <SafeAreaView style={{flex:1,}}>   
+    <SafeAreaView style={{flex:1, backgroundColor:'#ebf1fc'}}>   
         <View style={{marginHorizontal:25, }}>
         
         <View style={{alignItems:"center"}}>    
