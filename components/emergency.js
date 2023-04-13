@@ -12,8 +12,9 @@ import { FullWindowOverlay } from "react-native-screens";
 export default function Emergency({navigation}){ 
     
     return( 
-<View style={{backgroundColor:'#eff2f9', justifyContent:'center', alignItems:'center', }} > 
-    <View  style={{marginTop:50, flexDirection:'row',  }}> 
+        
+<View style={{justifyContent:'center', alignItems:'center', }} > 
+    <View  style={{marginTop:10, flexDirection:'row',  }}> 
         <View > 
             <Image source={avtar} style={styles.avtar}></Image>  
         </View> 

@@ -120,6 +120,7 @@ export default function Home ({navigation}) {
               </TouchableOpacity> 
  
             <TouchableOpacity 
+            onPress={ () => navigation.navigate("Chat") }
             //onPress={() => { this.setState({ isVisible: true }) }}
             > 
           <View style={styleHome.innerView6} > 

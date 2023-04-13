@@ -10,6 +10,7 @@ import DetailsPage from './components/manual_ambulance_booking';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './components/home';
 import ContactUs from './components/contactUs';
+import ChatScreen  from './components/ChatScreen';
 import { useEffect, useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -45,6 +46,7 @@ export default function Navigation() {
         <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>
         <Stack.Screen name='DetailsPage' component={DetailsPage} options={{headerShown: false}}/>
         <Stack.Screen name='ContactUs' component={ContactUs} options={{headerShown: false}}/>
+        <Stack.Screen name='Chat' component={ChatScreen} options={{headerShown: false}}/>
       </Stack.Navigator>
     </NavigationContainer>
     </TailwindProvider>
