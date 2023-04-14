@@ -36,10 +36,9 @@ export default function Navigation() {
     <TailwindProvider>
     <NavigationContainer>
     <Stack.Navigator initialRouteName="OnboardingScreen" >
-         
          {!isFirstLaunch && (
-            <Stack.Screen options={{ headerShown:false }} name="OnboardingScreen" component={OnboardingScreen} />) }
-          <Stack.Screen options={{ headerShown:false }} name="Onboard" component={Onboard} />
+        <Stack.Screen options={{ headerShown:false }} name="OnboardingScreen" component={OnboardingScreen} />) }
+        <Stack.Screen options={{ headerShown:false }} name="Onboard" component={Onboard} />
         <Stack.Screen name="Emergency" component={Emergency} options={{headerShown: false}}/>
         <Stack.Screen name="Login" component={Login} options={{headerShown: false}}/>
         <Stack.Screen name="Register" component={Register} options={{headerShown: false}}/>
