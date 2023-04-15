@@ -1,16 +1,58 @@
-import { View,StyleSheet,Image,Text, TouchableOpacity, ScrollView} from "react-native"; 
+import { View,StyleSheet,Image,Text, TouchableOpacity, ScrollView,Alert} from "react-native"; 
 import { avtar } from "../images/images"; 
-// import {streacher} from "../images/images"; 
-// import {finger_cut} from "../images/images"; 
-// import {itching_person} from "../images/images"; 
-// import { smallpox_person } from "../images/images"; 
 import Ionicons from "react-native-vector-icons/Ionicons"; 
 import MaterialIcons from "react-native-vector-icons/MaterialIcons"; 
 import * as Animatable from 'react-native-animatable';
-import { FullWindowOverlay } from "react-native-screens";
- 
+import { nexmoApiKey,nexmoApiSecret } from "../nexmo config";
+import * as Location from 'expo-location';
+import React, { useState, useEffect } from 'react';
+//import { FullWindowOverlay } from "react-native-screens";
+
 export default function Emergency({navigation}){ 
     
+    const [location, setLocation] = useState(null);
+    const [errorMsg, setErrorMsg] = useState(null);
+  
+    useEffect(() => {
+      (async () => {
+        let { status } = await Location.requestForegroundPermissionsAsync();
+        if (status !== 'granted') {
+          setErrorMsg('Permission to access location was denied');
+          return;
+        }
+  
+        let location = await Location.getCurrentPositionAsync({});
+        setLocation(location);
+      })();
+    }, []);
+  
+    const handleSendLocation = async () => {
+      const { latitude, longitude } = location.coords;
+      const message = `My current location is http://maps.google.com/maps?q=${latitude},${longitude}`;
+      const url = `https://rest.nexmo.com/sms/json`;
+  
+      try {
+        const response = await fetch(url, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            api_key: nexmoApiKey,
+            api_secret: nexmoApiSecret,
+            to: '917079020338', // replace with the phone number you want to send the location to
+            from: 'NEXMO',
+            text: message,
+          }),
+        });
+        const data = await response.json();
+        console.log(data);
+        Alert.alert('Success', 'Location sent successfully!');
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
     return( 
         
 <View style={{justifyContent:'center', alignItems:'center', }} > 
@@ -49,7 +91,9 @@ export default function Emergency({navigation}){
         <View style={{marginTop:50,alignItems:'center',}} > 
         <View style={{ borderBottomColor:'red', borderBottomWidth:3, borderRightColor:'blue', borderRightWidth:3, borderRadius:110,  borderTopColor:'blue', borderTopWidth:3, height:215, width:215,justifyContent:'center', alignItems:'center'}}>
             <Animatable.View  animation={"pulse"} easing="ease-in-out" iterationCount={"infinite"}>
-                <TouchableOpacity style={{height:200, width:200, borderRadius:100,backgroundColor:'#fa4b4a', justifyContent:'center',alignItems:'center',}}> 
+                <TouchableOpacity
+                 //onPress={handleSendLocation} 
+                style={{height:200, width:200, borderRadius:100,backgroundColor:'#fa4b4a', justifyContent:'center',alignItems:'center',}}> 
                 <Ionicons name="call" size={100} color="white"  style={{marginRight:10,padding:5, color:'white', }}></Ionicons> 
                 </TouchableOpacity> 
             </Animatable.View>  
