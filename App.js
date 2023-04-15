@@ -13,6 +13,7 @@ import ContactUs from './components/contactUs';
 import ChatScreen  from './components/ChatScreen';
 import { useEffect, useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { RecoilRoot } from 'recoil';
 
 
 const Stack = createNativeStackNavigator();
@@ -33,6 +34,7 @@ export default function Navigation() {
   }, [])
 
   return (
+    <RecoilRoot>
     <TailwindProvider>
     <NavigationContainer>
     <Stack.Navigator initialRouteName="OnboardingScreen" >
@@ -50,6 +52,6 @@ export default function Navigation() {
       </Stack.Navigator>
     </NavigationContainer>
     </TailwindProvider>
-    
+    </RecoilRoot>
   );
 }

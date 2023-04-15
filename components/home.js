@@ -1,12 +1,38 @@
-import React, { Component } from 'react'; 
+import React, { useState, useEffect } from 'react'; 
 import { View, Text, SafeAreaView, Image, TouchableOpacity,  Modal,  } from 'react-native'; 
 import { question, medicine, Labtest, Message, siren, medikit, avtar, self, profile,  } from '../images/images.js'; 
 
 import styleHome from '../styles/home style.js'; 
+import {firebase} from '../Database/firebase';
 
 
 export default function Home ({navigation}) { 
+  const [userRef, setUserRef] = useState(null);
   //state = {  isVisible: false,} 
+
+  useEffect(() => {
+    const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
+      setUserRef(user);
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, []);
+
+
+  const signOut = () => {
+    if (userRef) {
+      console.log('Signed out from:', userRef.email);
+      firebase.auth().signOut()
+        .then(() => {
+          navigation.replace('Login');
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+  };
   
  
     return ( 
@@ -69,6 +95,7 @@ export default function Home ({navigation}) {
  
             <TouchableOpacity 
             //onPress={() => { this.setState({ isVisible: true }) }}
+            onPress={signOut}
             > 
           <View style={styleHome.innerView1}> 
               <Image source={medikit} style={styleHome.image} ></Image> 

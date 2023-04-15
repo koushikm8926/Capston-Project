@@ -21,7 +21,7 @@ export default function Emergency({navigation}){
         
         <View style={{flexDirection:'column', marginLeft:10, marginTop:12,}}> 
             <Text style={{fontWeight:'500',  }} >Hello User!</Text> 
-            <TouchableOpacity onPress={()=> navigation.navigate("Register")}> 
+            <TouchableOpacity onPress={()=> navigation.navigate("Login")}> 
             <Text style={{fontWeight:'bold', fontSize:15, color:'red' }}>Complete your profile</Text> 
             </TouchableOpacity> 
         </View> 
