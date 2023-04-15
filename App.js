@@ -14,6 +14,7 @@ import { useEffect, useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Forgot from './components/ForgotScreen';
 import NewPassword from './components/NewPasswordScreen';
+import Otp from './components/OtpForgotScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -46,8 +47,9 @@ export default function Navigation() {
         <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>
         <Stack.Screen name='DetailsPage' component={DetailsPage} options={{headerShown: false}}/>
         <Stack.Screen name='ContactUs' component={ContactUs} options={{headerShown: false}}/>
-        <Stack.Screen name='Forgot' component={Forgot} ></Stack.Screen>
-        <Stack.Screen name='NewPassword' component={NewPassword}></Stack.Screen>
+        <Stack.Screen name='Forgot' component={Forgot} options={{headerShown: false}} ></Stack.Screen>
+        <Stack.Screen name='NewPassword' component={NewPassword} options={{headerShown: false}} ></Stack.Screen>
+        <Stack.Screen name='Otp' component={Otp} options={{headerShown: false}} ></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
     </TailwindProvider>

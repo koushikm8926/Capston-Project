@@ -1,51 +1,48 @@
 import React, { useState } from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 import Input from "../components/CustomInput/CustomInput";
 import Buttons from "../components/CustomButton/CustomButton";
+import { Entypo } from "@expo/vector-icons";
 
 const Forgot = ({ navigation }) => {
-  const [code, setCode] = useState("");
-  const [newPassword, setNewPassword] = useState("");
+  const [email, setEmail] = useState("");
 
   const onsubmit = () => {
-    console.warn("Submit button pressed");
-    // navigation.navigate('SignIn')
+    // console.warn("Verify button pressed");
+    navigation.navigate("Otp");
   };
   const onBackToSignIn = () => {
     console.warn("Go to LogIn");
-    navigation.navigate('Login')
-  };
-  const onVerify = () => {
-    console.warn('Verify button pressed')
-    navigation.navigate('NewPassword')
+    navigation.navigate("Login");
   };
 
   return (
     <View style={styles.root}>
-      <Text style={styles.title}>Reset your password</Text>
-      <Text style={{ marginVertical: 5 }}>Email*</Text>
-      <Input
-        placeholder="Entert your Email"
-        value={code}
-        setValue={setCode}
-      />
+      <Image source={require("../assets/forgot.png")} style={styles.img} />
+      <Text style={styles.title}>Forgot password?</Text>
+      <View style={styles.forgotDes}>
+        <Text style={styles.forgotDesLbl}>
+          Don't worry! It happens, please enter the address associated with your
+          account
+        </Text>
+      </View>
+      <View style={{ flexDirection: "row" }}>
+        <View style={{ width:"10%"}}>
+          <Entypo name="email" size={20} color="grey" />
+        </View>
+        <View style={{ flex:1}} >
+          <Input
+            placeholder="Entert your Email"
+            value={email}
+            setValue={setEmail}
+            style={styles.textInput}
+          />
+        </View>
+      </View>
       <Buttons
         title="Submit"
-        backgroundColor="#f0cf65"
+        backgroundColor="#2534db"
         onPress={onsubmit}
-        color="white"
-        style={{ marginVertical: 5 }}
-      />
-      <Text style={{ marginVertical: 5 }}>Verification Code*</Text>
-      <Input
-        placeholder="Entert your verification code"
-        value={newPassword}
-        setValue={setNewPassword}
-      />
-      <Buttons
-        title="Verify"
-        backgroundColor="#f0cf65"
-        onPress={onVerify}
         color="white"
         style={{ marginVertical: 5 }}
       />
@@ -56,15 +53,29 @@ const Forgot = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   root: {
-    alignItems: "center",
     padding: 20,
+    backgroundColor: "#fff",
+    flex: 1,
   },
   title: {
-    fontSize: 30,
-    marginTop: 60,
-    color: "#5824d1",
-    fontWeight: "bold",
+    fontSize: 40,
+    color: "#000",
+    fontWeight: "900",
     marginVertical: 30,
+  },
+  img: {
+    position: "relative",
+    width: 380,
+    height: 320,
+  },
+  forgotDes: {
+    position: "relative",
+    bottom: 35,
+    marginTop: 15,
+  },
+  forgotDesLbl: {
+    color: "#000",
+    // fontFamily: Fonts.type.NotoSansRegular,
   },
 });
 

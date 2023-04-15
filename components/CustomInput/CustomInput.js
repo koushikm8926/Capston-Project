@@ -23,13 +23,23 @@ export default function Input({
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "white",
-    width: "100%",
-    borderColor: "black",
+    // backgroundColor: "#c0d6fa",
+    // width: "100%",
+    // borderColor: "black",
+    // borderWidth: 1,
+    // borderRadius: 5,
+    // paddingHorizontal: 10,
+    // marginVertical: 5,
+    borderBottomColor: "#aaa",
     borderWidth: 1,
-    borderRadius: 5,
-    paddingHorizontal: 10,
-    marginVertical: 5,
+    borderTopWidth: 0,
+    borderLeftWidth: 0,
+    borderRightWidth: 0,
+    color: "#000",
+    fontSize: 16,
+    // fontFamily: Fonts.type.NotoSansMedium,
+    height: 40,
+    flex: 1
   },
   input: {},
 });

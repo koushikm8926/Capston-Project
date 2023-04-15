@@ -22,9 +22,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginVertical: 5,
     padding: 8,
+    borderRadius: 15,
+    marginTop: 20,
+    backgroundColor:"#2534db"
+
   },
   text: {
-    fontWeight: "700",
+    fontWeight: "800",
     color: "black",
   },
 });
