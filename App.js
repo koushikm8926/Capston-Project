@@ -6,7 +6,6 @@ import Register from './components/RegisterScreen';
 import OnboardingScreen from './components/OnboardingScreen';
 import { TailwindProvider } from 'tailwindcss-react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import DetailsPage from './components/manual_ambulance_booking';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './components/home';
 import ContactUs from './components/contactUs';
@@ -45,7 +44,6 @@ export default function Navigation() {
         <Stack.Screen name="Login" component={Login} options={{headerShown: false}}/>
         <Stack.Screen name="Register" component={Register} options={{headerShown: false}}/>
         <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>
-        <Stack.Screen name='DetailsPage' component={DetailsPage} options={{headerShown: false}}/>
         <Stack.Screen name='ContactUs' component={ContactUs} options={{headerShown: false}}/>
         <Stack.Screen name='Chat' component={ChatScreen} options={{headerShown: false}}/>
       </Stack.Navigator>
