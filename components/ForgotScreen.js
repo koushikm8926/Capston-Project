@@ -3,22 +3,25 @@ import { View, Text, StyleSheet, Image } from "react-native";
 import Input from "../components/CustomInput/CustomInput";
 import Buttons from "../components/CustomButton/CustomButton";
 import { Entypo } from "@expo/vector-icons";
+import { MaterialIcons } from '@expo/vector-icons';
 
 const Forgot = ({ navigation }) => {
   const [email, setEmail] = useState("");
 
   const onsubmit = () => {
     // console.warn("Verify button pressed");
-    navigation.navigate("Otp");
+    navigation.navigate("Otp", {
+      paramKey: email
+    });
   };
-  const onBackToSignIn = () => {
-    console.warn("Go to LogIn");
-    navigation.navigate("Login");
+  const onRegister = () => {
+    navigation.navigate("Register")
   };
 
   return (
     <View style={styles.root}>
-      <Image source={require("../assets/forgot.png")} style={styles.img} />
+      <MaterialIcons name="watch-later" size={30} color="black" />
+      <Image source={require("../images/forgot.png")} style={styles.img} />
       <Text style={styles.title}>Forgot password?</Text>
       <View style={styles.forgotDes}>
         <Text style={styles.forgotDesLbl}>
@@ -27,8 +30,8 @@ const Forgot = ({ navigation }) => {
         </Text>
       </View>
       <View style={{ flexDirection: "row" }}>
-        <View style={{ width:"10%"}}>
-          <Entypo name="email" size={20} color="grey" />
+        <View style={{ width:"10%", marginVertical: 15}}>
+          <Entypo name="email" size={20} color="black" />
         </View>
         <View style={{ flex:1}} >
           <Input
@@ -46,7 +49,10 @@ const Forgot = ({ navigation }) => {
         color="white"
         style={{ marginVertical: 5 }}
       />
-      <Buttons title="Back to SignIn" onPress={onBackToSignIn} />
+      <View style={styles.textView}>
+      <Text style={styles.text} >New user? <Text onPress={onRegister} style={{color: "#2534db"}} >Register</Text></Text>
+      </View>
+      {/* <Buttons title="Back to SignIn" onPress={onBackToSignIn} /> */}
     </View>
   );
 };
@@ -75,8 +81,16 @@ const styles = StyleSheet.create({
   },
   forgotDesLbl: {
     color: "#000",
-    // fontFamily: Fonts.type.NotoSansRegular,
   },
+  textView:{
+    alignItems: "center",
+    marginTop: 20,
+    fontWeight: "700"
+  },
+  text:{
+    fontSize: 15,
+    fontWeight: "800",
+  }
 });
 
 export default Forgot;
