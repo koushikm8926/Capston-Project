@@ -1,19 +1,19 @@
 import * as React from 'react';
+import { RecoilRoot } from 'recoil';
+import Home from './components/home';
 import Login from './components/login';
 import Onboard from './components/Onboard';
+import { useEffect, useState } from 'react';
 import Emergency from './components/emergency';
-import Register from './components/RegisterScreen';
-import OnboardingScreen from './components/OnboardingScreen';
-import { TailwindProvider } from 'tailwindcss-react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Home from './components/home';
 import ContactUs from './components/contactUs';
 import ChatScreen  from './components/ChatScreen';
-import { useEffect, useState } from 'react';
+import Register from './components/RegisterScreen';
+import { TailwindProvider } from 'tailwindcss-react-native';
+import OnboardingScreen from './components/OnboardingScreen';
+import { NavigationContainer } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { RecoilRoot } from 'recoil';
-
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import AmbulanceBooking from './components/AmbulanceBooking';
 
 const Stack = createNativeStackNavigator();
 
@@ -46,6 +46,7 @@ export default function Navigation() {
         <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>
         <Stack.Screen name='ContactUs' component={ContactUs} options={{headerShown: false}}/>
         <Stack.Screen name='Chat' component={ChatScreen} options={{headerShown: false}}/>
+        <Stack.Screen name='AmbulanceBooking' component={AmbulanceBooking} options={{headerShown: false}}/> 
       </Stack.Navigator>
     </NavigationContainer>
     </TailwindProvider>
