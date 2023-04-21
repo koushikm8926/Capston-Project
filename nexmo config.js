@@ -1,7 +1,4 @@
 
-
-
-
 //Gagandeeps APIS
-export const nexmoApiKey = '';
-export const nexmoApiSecret = '';
+// export const nexmoApiKey = 'cfd1ea13';
+// export const nexmoApiSecret = 'yw9B9sDssOQqLUyE';
