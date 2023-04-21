@@ -10,8 +10,10 @@ import DetailsPage from './components/manual_ambulance_booking';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './components/home';
 import ContactUs from './components/contactUs';
+import ChatScreen  from './components/ChatScreen';
 import { useEffect, useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { RecoilRoot } from 'recoil';
 import Forgot from './components/ForgotScreen';
 import NewPassword from './components/NewPasswordScreen';
 import OtpScreen from './components/OtpForgotScreen';
@@ -34,25 +36,26 @@ export default function Navigation() {
   }, [])
 
   return (
+    <RecoilRoot>
     <TailwindProvider>
     <NavigationContainer>
     <Stack.Navigator initialRouteName="OnboardingScreen" >
-         
          {!isFirstLaunch && (
-            <Stack.Screen options={{ headerShown:false }} name="OnboardingScreen" component={OnboardingScreen} />) }
-          <Stack.Screen options={{ headerShown:false }} name="Onboard" component={Onboard} />
+        <Stack.Screen options={{ headerShown:false }} name="OnboardingScreen" component={OnboardingScreen} />) }
+        <Stack.Screen options={{ headerShown:false }} name="Onboard" component={Onboard} />
         <Stack.Screen name="Emergency" component={Emergency} options={{headerShown: false}}/>
         <Stack.Screen name="Login" component={Login} options={{headerShown: false}}/>
         <Stack.Screen name="Register" component={Register} options={{headerShown: false}}/>
         <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>
         <Stack.Screen name='DetailsPage' component={DetailsPage} options={{headerShown: false}}/>
         <Stack.Screen name='ContactUs' component={ContactUs} options={{headerShown: false}}/>
+        <Stack.Screen name='Chat' component={ChatScreen} options={{headerShown: false}}/>
         <Stack.Screen name='Forgot' component={Forgot} options={{headerShown: false}} ></Stack.Screen>
         <Stack.Screen name='NewPassword' component={NewPassword} options={{headerShown: false}} ></Stack.Screen>
         <Stack.Screen name='Otp' component={OtpScreen} options={{headerShown: false}} ></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
     </TailwindProvider>
-    
+    </RecoilRoot>
   );
 }

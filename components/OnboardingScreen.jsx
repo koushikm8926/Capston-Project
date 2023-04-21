@@ -1,7 +1,8 @@
-import { View, Text, Image } from 'react-native'
 import React from 'react'
+import { View, Text, Image } from 'react-native'
 import Onboarding from 'react-native-onboarding-swiper';
 import { useNavigation } from '@react-navigation/native';
+import { onboard1, onboard2, onboard3 } from "../images/images"; 
 
 const OnboardingScreen = () => {
     const navigation = useNavigation();
@@ -21,30 +22,30 @@ const OnboardingScreen = () => {
     DotComponent = {DotComponent}
   pages={[
     {
-      backgroundColor: '#fff',
-      image: <Image source={{uri: "https://th.bing.com/th/id/OIP.HLuY60jzx5puuKjbqmWRRwHaEK?pid=ImgDet&rs=1"}} 
+      backgroundColor: '#ebf1fc',
+      image: <Image source={onboard1} 
       className="w-72 h-72 object-contain"
       />,
-      title: 'Enjoy, In Hills',
-      subtitle: 'Done with React Native Onboarding Swiper',
+      title: 'Need A Doctor',
+      subtitle: 'We allow users to easily access medical care from a licensed healthcare professional, such as a doctor or a nurse practitioner, through the app. ',
     },
 
     {
-        backgroundColor: '#fff',
-        image: <Image source={{uri: "https://th.bing.com/th/id/OIP.Wtzhl_ib7O-bNv--tL0yRwHaE7?pid=ImgDet&w=1697&h=1128&rs=1"}} 
+        backgroundColor: '#ebf1fc',
+        image: <Image source={onboard2}  
         className="w-72 h-72 object-contain"
         />,
-        title: 'Feel, Relax in lawn',
-        subtitle: 'Done with React Native Onboarding Swiper',
+        title: 'Health Advice',
+        subtitle: 'We provide users with access to expert health advice and information on a wide range of health topics, such as nutrition, fitness, mental health, and disease prevention, through the app',
       },
 
       {
-        backgroundColor: '#fff',
-        image: <Image source={{uri: "https://th.bing.com/th/id/OIP.YAXlTjvtEKchdMVc5laZhwHaE8?pid=ImgDet&rs=1"}} 
+        backgroundColor: '#ebf1fc',
+        image: <Image source={onboard3}  
         className="w-72 h-72 object-contain"
         />,
-        title: 'Amazing',
-        subtitle: 'Done with React Native Onboarding Swiper',
+        title: '24x7 Ambulance Services',
+        subtitle: 'This feature is especially useful for individuals who require immediate medical attention and need to be transported to a hospital or healthcare facility quickly and safely. ',
       },
     
   ]}
