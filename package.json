@@ -10,15 +10,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
-<<<<<<< HEAD
-    "@react-native-async-storage/async-storage": "^1.18.1",
-    "@react-native-community/clipboard": "^1.5.1",
-    "@react-navigation/native": "^6.1.6",
-    "@react-navigation/native-stack": "^6.9.12",
-    "expo": "^48.0.11",
-=======
     "@expo/config-plugins": "^6.0.0",
->>>>>>> 48dc7a1419303df7d377cb33e662c500ac7796ea
     "@expo/webpack-config": "^18.0.1",
     "@react-native-async-storage/async-storage": "1.17.11",
     "@react-native-google-signin/google-signin": "^9.0.2",

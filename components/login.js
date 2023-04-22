@@ -35,7 +35,7 @@ export default function Login({navigation}){
         <View style={styles.inputview}>
         <Ionicons name="ios-lock-closed" size={20} color="blue" style={{marginRight:10,padding:5,}}/>
         <TextInput placeholder="Password" style={styles.TextInput}  secureTextEntry={true} />
-        <TouchableOpacity onPress={()=>{}}>
+        <TouchableOpacity onPress={()=>{navigation.navigate("Forgot")}}>
         <Text style={{fontWeight:"700", color:"#42DAFF"}}>Forgot?</Text>
         </TouchableOpacity>   
         </View>

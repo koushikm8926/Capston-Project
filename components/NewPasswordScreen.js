@@ -11,7 +11,6 @@ const NewPassword = ({ navigation }) => {
   const [newPassword, setNewPassword] = useState("");
 
   const onBackToSignIn = () => {
-    console.warn("Go to LogIn");
     navigation.navigate('Login')
   };
   const onConfirm = () => {
