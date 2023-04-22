@@ -6,7 +6,6 @@ import * as Animatable from 'react-native-animatable';
 import { nexmoApiKey,nexmoApiSecret } from "../nexmo config";
 import * as Location from 'expo-location';
 import React, { useState, useEffect } from 'react';
-//import { FullWindowOverlay } from "react-native-screens";
 
 export default function Emergency({navigation}){ 
     

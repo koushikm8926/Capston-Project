@@ -1,11 +1,13 @@
 import React from "react";
 import { styles } from "../styles/on-board-style";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import { View, Text, TouchableOpacity, SafeAreaView, Image} from "react-native";
+import { View, Text, TouchableOpacity, SafeAreaView, Image,StyleSheet} from "react-native";
 import { Hospitalanimation } from "../images/images";
 
 
 export default function Onboard({navigation}){
+    
+
     return(
         <SafeAreaView style={{backgroundColor:'#ffffff',height:1000,}} >   
 
@@ -22,12 +24,51 @@ export default function Onboard({navigation}){
             <Text style={styles.text2}>At One CLick!</Text>
             </View>
 
-            <View style={{marginTop:50, justifyContent:"center",alignItems:"center",}}> 
+            {/* <View style={{marginTop:50, justifyContent:"center",alignItems:"center",}}> 
             <TouchableOpacity style={styles.TouchableOpacity} onPress={() => navigation.navigate('Emergency')}>
             <Ionicons name="arrow-forward" size={20} color="white"></Ionicons>
              </TouchableOpacity>  
-            </View>  
+            </View>   */}
+
+            <View style={style.lastView}>
+                <TouchableOpacity onPress={()=>  navigation.navigate("Emergency")}
+                style={{
+                backgroundColor:"#02585b", 
+                height:50, 
+                width:150,  
+                justifyContent:"center",
+                alignItems:"center",
+                borderRadius:10,
+                
+                }}>
+                    <Text style={{color:'white', fontSize: 15, fontWeight: 'bold', }}>Emergency</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity onPress={()=>  navigation.navigate("Login")}
+                style={{
+                backgroundColor:"#4bb7b9", 
+                height:50, 
+                width:150,  
+                justifyContent:"center",
+                alignItems:"center",
+                borderRadius:10,
+                marginLeft:10,
+                }}>
+                <Text style={{color:'white', fontSize: 15, fontWeight: 'bold', }} > Non Emergency</Text>
+                </TouchableOpacity>
+            </View>
 
         </SafeAreaView>
     );
 }
+
+const style = StyleSheet.create({
+    lastView:{
+        flexDirection:'row', 
+        marginTop:50, 
+        justifyContent:"space-between",
+        alignItems:"center", 
+        marginLeft:45,
+        marginRight:50,
+    }
+})
