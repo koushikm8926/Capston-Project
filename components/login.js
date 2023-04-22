@@ -103,7 +103,7 @@ export default function Login({navigation}){
             <MaterialIcons name="visibility-off" size={24} color="blue" style={{alignSelf:'center', right:10}} onPress={showPassword} />
             :<MaterialIcons name="visibility" size={24} color="blue" style={{alignSelf:'center', right:10}} onPress={showPassword} />
         }
-        <TouchableOpacity onPress={()=>{}}>
+        <TouchableOpacity onPress={()=>navigation.navigate("ForgotScreen")}>
         <Text style={{fontWeight:"700", color:"#42DAFF", marginTop:5}}>Forgot?</Text>
         </TouchableOpacity>   
         </View>

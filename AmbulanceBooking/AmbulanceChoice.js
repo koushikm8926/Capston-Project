@@ -24,7 +24,6 @@ const data=[
   }
 ]
 
-
 const AmbulanceChoice = ({navigation}) => {
   return (
     <SafeAreaView>

@@ -14,6 +14,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { RecoilRoot } from "recoil";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import AmbulanceBooking from "./components/AmbulanceBooking";
+import ForgotScreen from "./components/ForgotScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -43,6 +44,7 @@ export default function Navigation() {
             <Stack.Screen name="Emergency" component={Emergency} options={{ headerShown: false }}/>
             <Stack.Screen name="Login" component={Login} options={{ headerShown: false }}  />
             <Stack.Screen name="Register" component={Register} options={{ headerShown: false }}/>
+            <Stack.Screen name="ForgotScreen"  component={ForgotScreen}  options={{ headerShown: false }}  />
             <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
             <Stack.Screen name="ContactUs" component={ContactUs} options={{ headerShown: false }} />
             <Stack.Screen name="Chat"  component={ChatScreen} options={{ headerShown: false }} />

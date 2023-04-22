@@ -17,7 +17,7 @@ export {default as onboard2} from "./onboard2.png"
 export {default as onboard3} from "./onboard3.png"
 export {default as AmbulanceBooking} from "./Ambulance-booking.png"
 export {default as Hospitalanimation} from "./hospital-animation.gif"
-
+export {default as ForgotPasswordScreenGif} from "./ForgotPassword.gif"
 
 
 
