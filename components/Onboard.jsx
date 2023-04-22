@@ -1,19 +1,20 @@
 import React from "react";
-import { Ambulance } from "../images/images";
 import { styles } from "../styles/on-board-style";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import { View, Text, StyleSheet, TouchableOpacity, SafeAreaView, Image} from "react-native";
+import { View, Text, TouchableOpacity, SafeAreaView, Image} from "react-native";
+import { Hospitalanimation } from "../images/images";
+
 
 export default function Onboard({navigation}){
     return(
-        <SafeAreaView >   
+        <SafeAreaView style={{backgroundColor:'#ffffff',height:1000,}} >   
 
             <View style={styles.view1}>
             <Text style={styles.ambulance}>Ambulance</Text>
             </View>
 
             <View style={{alignItems:"center"}}>    
-            <Image style={{width: 300, height: 300}} source={Ambulance} />
+            <Image style={{width: 400, height: 300}} source={Hospitalanimation} />
             </View>
 
             <View style={styles.view2}>

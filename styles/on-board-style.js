@@ -7,7 +7,6 @@ const styles = StyleSheet.create({
         justifyContent:"center",
         alignItems:"center",
     },
-    
     view1:{
         marginTop:100,
         justifyContent:"center",
@@ -16,6 +15,7 @@ const styles = StyleSheet.create({
     ambulance:{
         fontSize:34,
         fontWeight:'bold', 
+        color:'#186161',
     },
     view2:{
         marginTop:100,
@@ -25,20 +25,20 @@ const styles = StyleSheet.create({
     text2:{
         fontSize:34,
         fontWeight:'bold', 
-        color:'blue',
+        color:'#4bb7b9',
     },
     text1:{
         fontSize:34,
         fontWeight:'bold', 
-        color:'red',
+        color:'#d1943b',
     },
     TouchableOpacity:{
-                backgroundColor:"black", 
-                    justifyContent:"center",
-                    alignItems:"center",
-                    height: 60,
-                    width: 60,
-                    borderRadius: 30,
+        backgroundColor:"#02585b", 
+        justifyContent:"center",
+        alignItems:"center",
+        height: 60,
+        width: 60,
+        borderRadius: 30,
     },
 
 })

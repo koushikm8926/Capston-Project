@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View ,KeyboardAvoidingView} from 'react-native'
 import React from 'react'
 import Map from '../GoogleMap/map'
 import tw from 'tailwind-react-native-classnames';
@@ -20,10 +20,13 @@ const AmbulanceBooking = () => {
         </View>
 
         <View style={tw`h-1/2` }>
-          <Stack.Navigator>
+        <KeyboardAvoidingView 
+        style={{flex:1,}}>
+          <Stack.Navigator   initialRouteName="AmbulanceChoice">
             <Stack.Screen component={MapDirections} name='MapDirections' options={{ headerShown:false }} ></Stack.Screen>
             <Stack.Screen component={AmbulanceChoice} name='AmbulanceChoice' options={{ headerShown:false }} ></Stack.Screen>
           </Stack.Navigator>
+        </KeyboardAvoidingView>
         </View>
 
 
