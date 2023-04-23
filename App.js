@@ -18,7 +18,7 @@ import ForgotScreen from "./components/ForgotScreen";
 import SendResetPasswordMail from "./components/SendResetPasswordMail";
 import UserDetailsScreen from "./components/UserDetailsScreen";
 import SuccessfullyBooked from "./AmbulanceBooking/SuccessfullyBooked";
-
+import DoctorScreen from "./components/DoctorScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -56,6 +56,7 @@ export default function Navigation() {
             <Stack.Screen name="SendResetPasswordMail"  component={SendResetPasswordMail}  options={{ headerShown: false }}  />
             <Stack.Screen name="UserDetailsScreen"  component={UserDetailsScreen}  options={{ headerShown: false }}  />
             <Stack.Screen component={SuccessfullyBooked} name='SuccessfullyBooked' options={{ headerShown:false }} ></Stack.Screen>
+            <Stack.Screen name="DoctorScreen" component={DoctorScreen} options={{ headerShown: false }}/>
           </Stack.Navigator>
         </NavigationContainer>
       </TailwindProvider>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'; 
 import { View, Text, SafeAreaView, Image, TouchableOpacity,  Modal,  } from 'react-native'; 
-import { question, medicine, Labtest, Message, siren, medikit, avtar, self, profile,  } from '../images/images.js'; 
+import { question, medicine, Labtest, Message, siren, medikit, avtar, self, profile, doctor  } from '../images/images.js'; 
 import { useNavigation } from '@react-navigation/core';
 import {createDrawerNavigator, DrawerContentScrollView, DrawerItemList, DrawerItem,} from '@react-navigation/drawer';
 import styleHome from '../styles/home style.js'; 
@@ -65,7 +65,7 @@ function MainHomeScreen () {
           <View style={styleHome.innerView1}> 
               <Image source={medikit} style={styleHome.image} ></Image> 
             <Text style={styleHome.text}>User Details</Text> 
-            {/* <Text>200+ Doctors</Text>  */}
+            
           </View> 
               </TouchableOpacity> 
  
@@ -84,11 +84,11 @@ function MainHomeScreen () {
                 </View> 
             </TouchableOpacity> 
  
-            <TouchableOpacity > 
+            <TouchableOpacity onPress={() => navigation.navigate("DoctorScreen")}> 
               <View style={styleHome.innerView4} > 
-                  <Image source={Labtest} style={styleHome.image} ></Image> 
-                  <Text style={styleHome.text}>Lab Test</Text> 
-                  <Text>Sample Collection</Text> 
+                  <Image source={doctor} style={styleHome.image} ></Image> 
+                  <Text style={styleHome.text}>Find a Doctor</Text> 
+                  <Text>200+ Dcotors</Text> 
               </View> 
             </TouchableOpacity> 
 
