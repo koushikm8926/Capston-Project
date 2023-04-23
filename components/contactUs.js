@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ScrollView, TextInput } from "react-native";
-import { View,Text,TouchableOpacity,StyleSheet ,Image,SafeAreaView} from "react-native";
+import { View,Text,TouchableOpacity, Image,SafeAreaView} from "react-native";
 import emailjs from '@emailjs/browser';
 import styles from "../styles/ContactUs.js";
 

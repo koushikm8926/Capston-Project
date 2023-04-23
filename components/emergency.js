@@ -6,7 +6,6 @@ import * as Animatable from 'react-native-animatable';
 import { nexmoApiKey,nexmoApiSecret } from "../nexmo config";
 import * as Location from 'expo-location';
 import React, { useState, useEffect } from 'react';
-//import { FullWindowOverlay } from "react-native-screens";
 
 export default function Emergency({navigation}){ 
     
@@ -92,7 +91,7 @@ export default function Emergency({navigation}){
         <View style={{ borderBottomColor:'red', borderBottomWidth:3, borderRightColor:'blue', borderRightWidth:3, borderRadius:110,  borderTopColor:'blue', borderTopWidth:3, height:215, width:215,justifyContent:'center', alignItems:'center'}}>
             <Animatable.View  animation={"pulse"} easing="ease-in-out" iterationCount={"infinite"}>
                 <TouchableOpacity
-                 //onPress={handleSendLocation} 
+                 onPress={handleSendLocation} 
                 style={{height:200, width:200, borderRadius:100,backgroundColor:'#fa4b4a', justifyContent:'center',alignItems:'center',}}> 
                 <Ionicons name="call" size={100} color="white"  style={{marginRight:10,padding:5, color:'white', }}></Ionicons> 
                 </TouchableOpacity> 
