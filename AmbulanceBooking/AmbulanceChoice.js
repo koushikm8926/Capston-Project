@@ -43,7 +43,7 @@ const AmbulanceChoice = ({navigation}) => {
        
         <TouchableOpacity style={tw`flex-row  justify-between items-center px-10 `}>
           <Image
-          style={{height:100,
+          style={{height:90,
           width:100, 
           resizeMode:'contain',
           borderRadius:10,
@@ -66,7 +66,9 @@ const AmbulanceChoice = ({navigation}) => {
     </View>
     
     <View style={{alignItems:'center', justifyContent:"center"}}>
-     <TouchableOpacity style={{backgroundColor:"black",width:300,height:45,borderRadius:10,alignItems:'center',justifyContent:"center"}} ><Text style={{color:"white"}}>Pay & Book</Text></TouchableOpacity>
+     <TouchableOpacity 
+     onPress={()=> navigation.navigate("SuccessfullyBooked")}
+     style={{backgroundColor:"black",width:300,height:45,borderRadius:10,alignItems:'center',justifyContent:"center"}} ><Text style={{color:"white"}}>Pay & Book</Text></TouchableOpacity>
     </View>
 
     </SafeAreaView>
