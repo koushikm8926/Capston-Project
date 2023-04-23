@@ -40,6 +40,7 @@ export default function Register({navigation}){
             .auth()
             .createUserWithEmailAndPassword(email, password)
             .then((data) => {
+              const userId = data.user.uid;
               const userEmail = data.user.email;
               const timestamp = firebase.firestore.FieldValue.serverTimestamp();
               const info = {
@@ -47,6 +48,7 @@ export default function Register({navigation}){
                 name: name,
                 email: email,
                 number: number,
+                userId: userId,
               };
               const userAuthRef = firebase.auth().currentUser;
               userRef.add(info);

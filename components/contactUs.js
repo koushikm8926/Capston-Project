@@ -4,7 +4,7 @@ import { View,Text,TouchableOpacity, Image,SafeAreaView} from "react-native";
 import emailjs from '@emailjs/browser';
 import styles from "../styles/ContactUs.js";
 
-export default function ContactUs(){
+export default function ContactUs({navigation}){
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -26,6 +26,8 @@ export default function ContactUs(){
     }, userId)
     .then((result) => {
       console.log('Email sent successfully:', result.text);
+      alert('Email sent successfully');
+      navigation.goBack();
     })
     .catch((error) => {
       console.error('Email failed to send:', error);
