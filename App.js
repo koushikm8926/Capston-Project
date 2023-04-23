@@ -40,7 +40,7 @@ export default function Navigation() {
     <RecoilRoot>
       <TailwindProvider>
         <NavigationContainer>
-          <Stack.Navigator initialRouteName="SuccessfullyBooked">
+          <Stack.Navigator initialRouteName="OnboardingScreen">
             {!isFirstLaunch && (
               <Stack.Screen options={{ headerShown: false }}  name="OnboardingScreen" component={OnboardingScreen}/>
             )}

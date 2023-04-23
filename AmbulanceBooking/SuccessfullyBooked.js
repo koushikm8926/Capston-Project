@@ -2,7 +2,8 @@ import { StyleSheet,Image, Text, View } from 'react-native'
 import React from 'react'
 import { paymentdone } from '../images/images'
 import { TouchableOpacity } from 'react-native'
-const SuccessfullyBooked = () => {
+
+const SuccessfullyBooked = ({navigation}) => {
   return (
     <View style={{backgroundColor:'#ffffff', height:1000,}}>
         
@@ -21,7 +22,9 @@ const SuccessfullyBooked = () => {
         </View>
 
         <View style={{alignItems:'center',marginTop:25,}}>
-            <TouchableOpacity style={{backgroundColor:"#12d76e",alignItems:'center', width:250,height:40, 
+            <TouchableOpacity 
+            onPress={()=> navigation.navigate("Onboard")}
+            style={{backgroundColor:"#12d76e",alignItems:'center', width:250,height:40, 
             borderRadius:10, justifyContent: 'center',
             }}>
             <Text style={{fontSize:17,color:'white', fontWeight:'bold',}}>Home</Text>
@@ -33,4 +36,3 @@ const SuccessfullyBooked = () => {
 
 export default SuccessfullyBooked
 
-const styles = StyleSheet.create({})

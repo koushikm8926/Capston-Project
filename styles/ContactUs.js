@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
       flex:1,
       alignItems:"center",
       justifyContent:"center",
+      backgroundColor:"#ffffff",
     },
     view1:{
       marginTop:10,
@@ -53,6 +54,7 @@ const styles = StyleSheet.create({
     },
     view3:{
       marginTop:30,
+      height:300,
     }
   })
 
