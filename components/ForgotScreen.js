@@ -4,14 +4,15 @@ import {firebase} from '../Database/firebase';
 import { TouchableOpacity } from 'react-native';
 import { ForgotPasswordScreenGif } from '../images/images';
 
-const ForgotScreen = () => {
+const ForgotScreen = ({navigation}) => {
 
     const[email, setEmail]=useState("")
     const[password, setPassword]=useState("")
     const forgetPassword= ()=>{
         firebase.auth().sendPasswordResetEmail(email)
         .then(()=>{
-            alert("Passsword  Reset Mail Sent To Your Registered Mail Id")
+            // alert("Passsword  Reset Mail Sent To Your Registered Mail Id")
+            navigation.navigate("SendResetPasswordMail")
         }
         )
         .catch((error)=>{
@@ -20,7 +21,7 @@ const ForgotScreen = () => {
     }
 
   return (
-    <View style={{marginTop:25,backgroundColor:'#ffffff', height:1000,}}>
+    <View style={{backgroundColor:'#ffffff', height:1000,}}>
         <View style={{alignItems:'center',marginTop:25,}}>
             <Image style={{height:300, width:300,}} source={ForgotPasswordScreenGif} />
             <Text style={{color:'#1c386c', fontSize:34,fontWeight:'bold', }}>Reset Password</Text>

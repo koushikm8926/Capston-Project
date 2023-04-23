@@ -15,6 +15,7 @@ import { RecoilRoot } from "recoil";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import AmbulanceBooking from "./components/AmbulanceBooking";
 import ForgotScreen from "./components/ForgotScreen";
+import SendResetPasswordMail from "./components/SendResetPasswordMail";
 
 
 const Stack = createNativeStackNavigator();
@@ -37,7 +38,7 @@ export default function Navigation() {
     <RecoilRoot>
       <TailwindProvider>
         <NavigationContainer>
-          <Stack.Navigator initialRouteName="OnboardingScreen">
+          <Stack.Navigator initialRouteName="SendResetPasswordMail">
             {!isFirstLaunch && (
               <Stack.Screen options={{ headerShown: false }}  name="OnboardingScreen" component={OnboardingScreen}/>
             )}
@@ -48,8 +49,9 @@ export default function Navigation() {
             <Stack.Screen name="ForgotScreen"  component={ForgotScreen}  options={{ headerShown: false }}  />
             <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
             <Stack.Screen name="ContactUs" component={ContactUs} options={{ headerShown: false }} />
-            <Stack.Screen name="Chat"  component={ChatScreen} options={{ headerShown: false }} />
+            <Stack.Screen name="Chat"  component={ChatScreen} options={{ headerShown: false }} />            
             <Stack.Screen name="AmbulanceBooking"  component={AmbulanceBooking}  options={{ headerShown: false }}  />
+            <Stack.Screen name="SendResetPasswordMail"  component={SendResetPasswordMail}  options={{ headerShown: false }}  />
           </Stack.Navigator>
         </NavigationContainer>
       </TailwindProvider>
