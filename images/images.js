@@ -19,5 +19,5 @@ export {default as AmbulanceBooking} from "./Ambulance-booking.png"
 export {default as Hospitalanimation} from "./hospital-animation.gif"
 export {default as ForgotPasswordScreenGif} from "./ForgotPassword.gif"
 
-
+export {default as RegisterScreenGIF} from "./RegistrationPage.gif"
 

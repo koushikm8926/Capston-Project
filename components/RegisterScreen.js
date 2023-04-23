@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from "react"; 
 import {View, Text, TouchableOpacity, StyleSheet, Image, SafeAreaView , TextInput, ScrollView, Platform} from "react-native"; 
-import { Ambulance } from "../images/images"; 
+import { Ambulance, RegisterScreenGIF } from "../images/images"; 
 import { styles } from "../styles/registerstyle"; 
 import Ionicons from "react-native-vector-icons/Ionicons"; 
 import MaterialIcons from "react-native-vector-icons/MaterialIcons"; 
@@ -103,14 +103,14 @@ export default function Register({navigation}){
 
 
     return( 
-    <SafeAreaView style={{flex:1, backgroundColor:'#ebf1fc'}}>    
+    <SafeAreaView style={{flex:1, backgroundColor:'#ffffff'}}>    
     <ScrollView 
     style={{marginHorizontal:25, }} 
     showsVerticalScrollIndicator={false}
     > 
              
             <View style={{alignItems:"center"}}>     
-            <Image  style={{width: 300, height: 300}} source={Ambulance} /> 
+            <Image  style={{width: 400, height: 300}} source={RegisterScreenGIF} /> 
             </View>  
  
             <Text style={styles.registertext}>Register</Text> 
