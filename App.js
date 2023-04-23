@@ -17,6 +17,7 @@ import NewPassword from "./components/NewPasswordScreen";
 import OtpScreen from "./components/OtpForgotScreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import AmbulanceBooking from "./components/AmbulanceBooking";
+import DoctorScreen from "./components/DoctorScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -99,6 +100,11 @@ export default function Navigation() {
             <Stack.Screen
               name="AmbulanceBooking"
               component={AmbulanceBooking}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="DoctorScreen"
+              component={DoctorScreen}
               options={{ headerShown: false }}
             />
           </Stack.Navigator>

@@ -43,7 +43,7 @@ export default function Home ({navigation}) {
         <Text style={styleHome.hello} >Hello, Gagandeep!</Text> 
         <View style={styleHome.view2}> 
            
-            <TouchableOpacity> 
+            <TouchableOpacity onPress={ () => navigation.navigate("DoctorScreen") }> 
                   <View style={styleHome.innerView1}> 
                       <Image source={medikit} style={styleHome.image} ></Image> 
                       <Text style={styleHome.text}>Find a Doctor</Text> 

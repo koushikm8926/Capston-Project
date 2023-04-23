@@ -7,6 +7,7 @@ import { nexmoApiKey,nexmoApiSecret } from "../nexmo config";
 import * as Location from 'expo-location';
 import React, { useState, useEffect } from 'react';
 //import { FullWindowOverlay } from "react-native-screens";
+import { itching_person, smallpox_person, finger_cut } from '../images/images.js'; 
 
 export default function Emergency({navigation}){ 
     
@@ -111,38 +112,38 @@ export default function Emergency({navigation}){
         <ScrollView 
             horizontal={true} 
             showsHorizontalScrollIndicator={false}>  
-            <TouchableOpacity> 
+            <TouchableOpacity onPress={ () => navigation.navigate("Chat") }> 
             <View style={{backgroundColor:'white',marginLeft:10,borderRadius:20, height:110, width:150,}}> 
                 <Text style={{fontSize:20, marginLeft:20, marginTop:15 }} >I had an accident </Text> 
                 <MaterialIcons name="person" size={20} color="grey" style={{color:'red', marginTop:20, marginLeft:20}}  /> 
                 {/* <Image source={streacher} style={{height:35, width:35, marginLeft:110, marginTop:-30}}></Image>   */}
  
             </View> 
-            </TouchableOpacity>  
+            </TouchableOpacity >  
  
-            <TouchableOpacity > 
+            <TouchableOpacity onPress={ () => navigation.navigate("Chat") }> 
             <View style={{backgroundColor:'white',marginLeft:10,borderRadius:20, height:110, width:150,}}> 
             <Text style={{fontSize:20, marginLeft:20, marginTop:15 }} >I have an injury </Text> 
                 <MaterialIcons name="person" size={20} color="grey" style={{color:'red', marginTop:20, marginLeft:20}}  /> 
-                {/* <Image source={finger_cut} style={{height:35, width:35, marginLeft:110, marginTop:-30}}></Image>   */}
+                <Image source={finger_cut} style={{height:35, width:35, marginLeft:110, marginTop:-30}}></Image>  
  
             </View> 
-            </TouchableOpacity>
+            </TouchableOpacity >
              
-            <TouchableOpacity>  
+            <TouchableOpacity onPress={ () => navigation.navigate("Chat") }>  
             <View style={{backgroundColor:'white',marginLeft:10,borderRadius:20, height:110, width:150,}}> 
             <Text style={{fontSize:20, marginLeft:20, marginTop:15 }} >I am feeling allery </Text> 
                 <MaterialIcons name="person" size={20} color="grey" style={{color:'red', marginTop:20, marginLeft:20}}  /> 
-                {/* <Image source={itching_person} style={{height:35, width:35, marginLeft:110, marginTop:-30}}></Image>   */}
+                <Image source={itching_person} style={{height:35, width:35, marginLeft:110, marginTop:-30}}></Image>  
  
             </View> 
             </TouchableOpacity>  
  
-            <TouchableOpacity>  
+            <TouchableOpacity onPress={ () => navigation.navigate("Chat") }>  
             <View style={{backgroundColor:'white',marginLeft:10,borderRadius:20, height:110, width:150,}}> 
             <Text style={{fontSize:20, marginLeft:20, marginTop:15 }} >I am having smallpox </Text> 
                 <MaterialIcons name="person" size={20} color="grey" style={{color:'red', marginTop:20, marginLeft:20}}  /> 
-                {/* <Image source={smallpox_person} style={{height:35, width:35, marginLeft:110, marginTop:-30}}></Image>   */}
+                <Image source={smallpox_person} style={{height:35, width:35, marginLeft:110, marginTop:-30}}></Image>  
  
             </View> 
             </TouchableOpacity>  
