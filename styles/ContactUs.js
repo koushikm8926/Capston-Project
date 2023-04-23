@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
       marginTop:10,
       backgroundColor:"#DEE9EC",
       borderRadius:20,
+      padding:15,
     },
     TextInput3:{
       width:"100%",
@@ -39,6 +40,7 @@ const styles = StyleSheet.create({
       marginTop:10,
       backgroundColor:"#DEE9EC",
       borderRadius:20,
+      padding:15,
     },
     TouchableOpacity:{
       backgroundColor:"#42DAFF",

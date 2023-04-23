@@ -5,6 +5,23 @@ const styleHome = StyleSheet.create({
             flex: 1,
             backgroundColor:'#ebf1fc',
           },
+          topDrawerIcon:{
+            position:'absolute',
+            top:5,
+            left:15,
+          },
+          drawerLogoutContainer:{
+            //alignSelf:'baseline',
+            backgroundColor:'orange',
+            justifyContent:'center',
+            marginTop:20,
+          },
+          drawerLogoutText:{
+            color:'white',
+            alignSelf:'center',
+            fontWeight:'bold',
+            fontSize:18
+          },
           vmain:{
             justifyContent:'center',
             alignItems:'center',

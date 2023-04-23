@@ -14,7 +14,7 @@ import ChatScreen  from './components/ChatScreen';
 import { useEffect, useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { RecoilRoot } from 'recoil';
-
+import UserDetailsScreen from './components/UserDetailsScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -48,6 +48,7 @@ export default function Navigation() {
         <Stack.Screen name='DetailsPage' component={DetailsPage} options={{headerShown: false}}/>
         <Stack.Screen name='ContactUs' component={ContactUs} options={{headerShown: false}}/>
         <Stack.Screen name='Chat' component={ChatScreen} options={{headerShown: false}}/>
+        <Stack.Screen name='UserDetailsScreen' component={UserDetailsScreen} options={{ headerShown:false,}}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
     </TailwindProvider>
