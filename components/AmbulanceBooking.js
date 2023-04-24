@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View ,KeyboardAvoidingView} from 'react-native'
+import { StyleSheet,  View ,KeyboardAvoidingView} from 'react-native'
 import React from 'react'
 import Map from '../GoogleMap/map'
 import tw from 'tailwind-react-native-classnames';

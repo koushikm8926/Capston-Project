@@ -11,6 +11,7 @@ import {
     SafeAreaView ,
     TextInput,
     ScrollView,
+    Alert,
 } from "react-native";
 import { Ambulance } from "../images/images";
 import {firebase} from '../Database/firebase';
@@ -60,7 +61,7 @@ export default function Login({navigation}){
                     alert('Please Verify Your Email to move to Home Page.')
                 }
             }).catch((error)=>{
-                console.log(error)
+                Alert.alert("Please enter correct user id and password")
             })
         }
         else{

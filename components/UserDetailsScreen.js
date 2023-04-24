@@ -37,7 +37,7 @@ export default function UserDetailsScreen({navigation}) {
         const {birthDate} = doc.data();
         const {emergencyContact} = doc.data();
         const id = doc.id;
-        const dateObject = moment(birthDate, 'MM/DD/YYYY').toDate();
+        const dateObject = moment(birthDate, 'MMMM DD, YYYY [at] hh:mm:ss A [UTC]Z');
         if(email == authRef){
           users.push({
             id:id,
@@ -51,10 +51,15 @@ export default function UserDetailsScreen({navigation}) {
             emergencyContact:emergencyContact,
           })
         }
-        
-        // setDate(new Date(dateObject));
-        setSelectedSex(sex)
-        console.log(sex);
+        console.log(dateObject)
+        if (dateObject !==null || bloodGroup!==null || sex!==null || emergencyContact!==null) {
+          console.log(bloodGroup)
+          setDate(dateObject.toDate());
+          setSelectedSex(sex);
+          setSelectedBloodGroup(bloodGroup);
+          setEmergencyContacts(emergencyContact);
+        }
+
       })
       setDataOfUser(users);
     })
@@ -74,7 +79,6 @@ export default function UserDetailsScreen({navigation}) {
 }
 
 const updateDetails = async () => {
-  console.log(dataOfUser[0].id);
   try {
     const info ={
       bloodGroup: selectedBloodGroup,
@@ -105,11 +109,11 @@ const updateDetails = async () => {
 
         <Text style={style.detailNameText} >Blood Group</Text>
         <View style={style.itemPicker}>
-        <Picker
-          selectedValue={selectedBloodGroup}
-          onValueChange={(itemValue, itemIndex) =>setSelectedBloodGroup(itemValue)}
-        >
-          <Picker.Item label="" value="" />
+          {console.log(selectedBloodGroup)}
+          <Picker
+          selectedValue={selectedBloodGroup || dataOfUser[0]?.bloodGroup}
+          onValueChange={(itemValue, itemIndex) => setSelectedBloodGroup(itemValue)}
+          >
           <Picker.Item label="A RhD positive (A+)" value="A+" />
           <Picker.Item label="A RhD negative (A-)" value="A-" />
           <Picker.Item label="B RhD positive (B+)" value="B+" />
@@ -125,10 +129,9 @@ const updateDetails = async () => {
         <Text style={style.detailNameText} >Sex</Text>
         <View style={style.itemPicker}>
         <Picker
-          selectedValue={selectedSex}
+          selectedValue={selectedSex || dataOfUser[0]?.sex}
           onValueChange={(itemValue, itemIndex) =>setSelectedSex(itemValue)}
         >
-          <Picker.Item label="" value="" />
           <Picker.Item label="Male" value="Male" />
           <Picker.Item label="Female" value="Female" />
           <Picker.Item label="Other" value="Other" />
@@ -136,21 +139,21 @@ const updateDetails = async () => {
         {/* <Text style={style.detailValueText}>{dataOfUser[0].sex}</Text> */}
         </View>
 
-        <Text style={style.detailNameText} >Birth Date</Text>
+        {/* <Text style={style.detailNameText} >Birth Date</Text>
         <TouchableOpacity
         onPress={showPicker}
         >
-        <Text style={style.detailValueText}>{date.toUTCString().slice(0, -12)}</Text>
+        <Text style={style.detailValueText}>{date.toUTCString().slice(0, -12)}</Text> */}
         {/* <Text style={style.detailValueText}>{date.toUTCString().slice(0, -12)}</Text> */}
-        </TouchableOpacity>
-        {visible && 
+        {/* </TouchableOpacity> */}
+        {/* {visible && 
               <DateTimePicker
               value={date}
               mode={'date'}
               display={Platform.OS==='ios' ? 'spinner' :'spinner'}
               onChange={onChange}
               ></DateTimePicker>
-        }
+        } */}
 
         <Text style={style.detailNameText} >Emergency Contacts</Text>
         <TextInput
