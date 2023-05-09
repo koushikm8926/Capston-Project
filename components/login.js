@@ -13,7 +13,6 @@ import {
     ScrollView,
     Alert,
 } from "react-native";
-import { Ambulance } from "../images/images";
 import {firebase} from '../Database/firebase';
 import { useRecoilState } from "recoil";
 import { emailVerificationSent } from "../Recoil/GlobalVariables";
@@ -25,20 +24,45 @@ export default function Login({navigation}){
     const [secure, setSecure] = useState(true);
     const [userAuthRef, setUserAuthRef] = useState(null);
     const [reloadPage, setReloadPage] = useState(false);
-    //const userAuthRef = firebase.auth().currentUser;
+    const hospitalRef = firebase.firestore().collection('hospitals');
+    const userRef = firebase.firestore().collection('users');
+    const [deviceToken, setDeviceToken] = useState('');
 
 
     useEffect(()=>{
-
         const unsubscribe = firebase.auth().onAuthStateChanged((user)=>{
             try {
                 if(user && user.emailVerified==true){
-                    navigation.replace('Home')
+                    userRef.where("email", "==", user.email).get()
+                    .then((querySnapshot)=>{
+                        if(!querySnapshot.empty){
+                            navigation.replace('Home');
+                        } else {
+                            hospitalRef.where("email", "==", user.email).get()
+                            .then((querySnapshot)=>{
+                                if(!querySnapshot.empty){
+                                    navigation.replace('HospitalHome');
+                                }
+                            })
+                        }
+                    }).catch((error)=>{
+                        alert(error);
+                    })
                 }
             } catch (error) {
                 alert(error)
             }
         });
+
+        // firebase.messaging()
+        // .getToken()
+        // .then((token) => {
+        //   setDeviceToken(token);
+        //   console.log('Device Token:', token);
+        // })
+        // .catch((error) => {
+        //   console.log('Error getting device token:', error);
+        // });
 
         return unsubscribe;
     },[reloadPage]);
@@ -70,14 +94,14 @@ export default function Login({navigation}){
     }
 
     return(
-    <SafeAreaView style={{flex:1, backgroundColor:'#ebf1fc'}}>   
+    <SafeAreaView style={{flex:1, backgroundColor:'#ffffff'}}>   
     <ScrollView 
     style={{marginHorizontal:25, }} 
     showsVerticalScrollIndicator={false}
     > 
         
         <View style={{alignItems:"center"}}>    
-        <Image  style={{width: 300, height: 300}} source={Ambulance} />
+        <Image  style={{width: 300, height: 300}} source={require('../images/login-animate.gif')} />
         </View> 
 
         <Text style={styles.loginText}>Login</Text>
@@ -118,7 +142,10 @@ export default function Login({navigation}){
         <View style={styles.lastview}>
         <Text>New to the app?</Text>
         <TouchableOpacity onPress={() => navigation.replace('Register')}>
-        <Text style={styles.register} >Register</Text>
+        <Text style={styles.register} >Register as User</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.replace('HospitalRegistration')}>
+        <Text style={styles.register} >Register as Hospital</Text>
         </TouchableOpacity>
         </View>
 

@@ -1,20 +1,18 @@
 import React,{useState, useEffect} from "react"; 
 import {View, Text, TouchableOpacity, StyleSheet, Image, SafeAreaView , TextInput, ScrollView, Platform} from "react-native"; 
-import { styles } from "../styles/registerstyle"; 
+import { styles } from "../styles/HospitalRegistrationStyle";
 import Ionicons from "react-native-vector-icons/Ionicons"; 
 import MaterialIcons from "react-native-vector-icons/MaterialIcons"; 
 import {firebase} from '../Database/firebase';
-import { useRecoilState } from "recoil";
-import { emailVerificationSent } from "../Recoil/GlobalVariables";
- 
- 
-export default function Register({navigation}){ 
+
+export default function HospitalRegistration({navigation}) {
     const [name, setName] = useState('');
     const [number, setNumber] = useState('');
+    const [cityName, setCityName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [secure, setSecure] = useState(true);
-    const userRef = firebase.firestore().collection('users');
+    const userRef = firebase.firestore().collection('hospitals');
     //const userAuthRef = firebase.auth().currentUser;
 
     useEffect(()=>{
@@ -34,7 +32,7 @@ export default function Register({navigation}){
     },[]);
 
     const handelRegister = () => {
-        if (email.length && password.length && name.length && number.length > 0) {
+        if (email.length && password.length && name.length && number.length && cityName.length > 0) {
           firebase
             .auth()
             .createUserWithEmailAndPassword(email, password)
@@ -48,6 +46,7 @@ export default function Register({navigation}){
                 email: email,
                 number: number,
                 userId: userId,
+                cityName: cityName,
               };
               const userAuthRef = firebase.auth().currentUser;
               userRef.add(info);
@@ -56,7 +55,7 @@ export default function Register({navigation}){
               userAuthRef.sendEmailVerification()
               .then(() => {
                   console.log("Email Sent Please check Your mails.");
-                  alert("You have Succesfully Registered with Us. Please Verify Your Email to move to Login.");
+                  alert("Please Verify Your Email to move to Home Page.");
                   navigation.replace("Login");
 
                 //   firebase.auth().signOut()
@@ -80,69 +79,6 @@ export default function Register({navigation}){
           alert("Please fill all the input Fields.");
         }
       };
-
-
-      // const handelRegister = () => {
-      //   if (email.length && password.length && name.length && number.length > 0) {
-      //     firebase
-      //       .auth()
-      //       .createUserWithEmailAndPassword(email, password)
-      //       .then((data) => {
-      //         const userId = data.user.uid;
-      //         const userEmail = data.user.email;
-      //         const timestamp = firebase.firestore.FieldValue.serverTimestamp();
-      //         firebase.firestore().collection('uniqueId').onSnapshot((querySnapshot)=>{
-      //           querySnapshot.forEach((uniqueDocData)=>{
-      //             // setUniqueIdOfUser(uniqueDocData.data().uniqueUserId)
-      //             // console.log(uniqueIdOfUser.toString())
-
-      //             const info = {
-      //               createdWhen: timestamp,
-      //               name: name,
-      //               email: email,
-      //               number: number,
-      //               userId: userId,
-      //               uniqueUserId:uniqueDocData.data().uniqueUserId,
-      //             };
-      //             const userAuthRef = firebase.auth().currentUser;
-      //             userRef.add(info);
-      //             console.log("Registered with: ", userEmail);
-          
-      //             userAuthRef.sendEmailVerification()
-      //             .then(() => {
-      //                 console.log("Email Sent Please check Your mails.");
-      //                 alert("Please Verify Your Email to move to Home Page.");
-      //                 navigation.replace("Login");
-    
-      //               //   firebase.auth().signOut()
-      //               //   .then(() => {
-      //               //       console.log('SignedOut from: '+ userAuthRef.email);
-      //               //       navigation.replace("Login");
-      //               //     })
-      //               //     .catch((error) => {
-      //               //       console.log(error);
-      //               //     });
-      //               }).then(()=>{
-      //                 firebase.firestore().collection('uniqueId').doc('imCanz7pr8DA2Nf5gUIw').update({
-      //                   uniqueUserId:parseInt(uniqueDocData.data().uniqueUserId) + 1,
-      //                 })
-      //               })
-      //               .catch((error) => {
-      //                 console.log(error);
-      //                 alert("Failed to send email verification. Please try again.");
-      //               })
-
-      //           })
-      //         })
-
-      //       })
-      //       .catch((error) => {
-      //         console.log(error);
-      //       });
-      //   } else {
-      //     alert("Please fill all the input Fields.");
-      //   }
-      // };
     
       
 
@@ -150,8 +86,7 @@ export default function Register({navigation}){
         setSecure(!secure)
     }
 
-
-    return( 
+  return (
     <SafeAreaView style={{flex:1, backgroundColor:'#ffffff'}}>    
     <ScrollView 
     style={{marginHorizontal:25, }} 
@@ -167,7 +102,7 @@ export default function Register({navigation}){
             <View style={styles.inputview}> 
             <MaterialIcons name="person" size={20} color="blue" style={styles.Icons}/> 
             <TextInput 
-            placeholder="Name" 
+            placeholder="Hospital Name" 
             style={{paddingVertical:0,flex:1,}} 
             onChangeText={val=> setName(val)}
             keyboardType="default"
@@ -177,10 +112,20 @@ export default function Register({navigation}){
             <View style={styles.inputview}> 
             <Ionicons name="phone-portrait" size={20} color="blue" style={styles.Icons}/> 
             <TextInput 
-            placeholder="Number" 
+            placeholder="Contact Number" 
             style={styles.textinput}  
             keyboardType="number-pad" 
             onChangeText={val=> setNumber(val)}
+            />    
+            </View> 
+
+            <View style={styles.inputview}> 
+            <MaterialIcons name="location-city" size={20} color="blue" style={styles.Icons} />
+            <TextInput 
+            placeholder="City Name" 
+            style={styles.textinput}  
+            keyboardType="default" 
+            onChangeText={val=> setCityName(val)}
             />    
             </View> 
  
@@ -211,10 +156,6 @@ export default function Register({navigation}){
             <TouchableOpacity onPress={handelRegister} style={styles.loginButton}> 
             <Text style={styles.loginText}>Register</Text> 
             </TouchableOpacity> 
-
-            {/* <TouchableOpacity onPress={googleSignIn}> 
-            <Text style={{...styles.loginText, color:'black'}}>Login with Google</Text> 
-            </TouchableOpacity>     */}
  
             <Text style={{textAlign:"center", marginBottom:30,}}>Or</Text>        
  
@@ -227,5 +168,5 @@ export default function Register({navigation}){
  
     </ScrollView> 
     </SafeAreaView> 
-    ); 
+  );
 }

@@ -1,7 +1,6 @@
 import { StyleSheet, Text, View,Image,TouchableOpacity } from 'react-native'
 import React from 'react'
 
-import { mail } from '../images/images'
 const SendResetPasswordMail = ({navigation}) => {
   return (
     <View style={{marginTop:25,backgroundColor:"#ffffff",height:1000,}} >
@@ -9,7 +8,7 @@ const SendResetPasswordMail = ({navigation}) => {
             <Text style={{fontSize:34,}}>Email has been sent!</Text>
             <Image 
             style={{height:200, width:200,}}
-            source={mail} />
+            source={require('../images/mail.gif')} />
 
             <TouchableOpacity  onPress={()=> navigation.navigate("Login")}
             style={{width:300,

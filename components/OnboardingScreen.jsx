@@ -2,7 +2,6 @@ import React from 'react'
 import { View, Text, Image } from 'react-native'
 import Onboarding from 'react-native-onboarding-swiper';
 import { useNavigation } from '@react-navigation/native';
-import { onboard1, onboard2, onboard3 } from "../images/images"; 
 
 const OnboardingScreen = () => {
     const navigation = useNavigation();
@@ -23,7 +22,7 @@ const OnboardingScreen = () => {
   pages={[
     {
       backgroundColor: '#ebf1fc',
-      image: <Image source={onboard1} 
+      image: <Image source={require('../images/onboard1.png')} 
       className="w-72 h-72 object-contain"
       />,
       title: 'Need A Doctor',
@@ -32,7 +31,7 @@ const OnboardingScreen = () => {
 
     {
         backgroundColor: '#ebf1fc',
-        image: <Image source={onboard2}  
+        image: <Image source={require('../images/onboard2.png')}  
         className="w-72 h-72 object-contain"
         />,
         title: 'Health Advice',
@@ -41,7 +40,7 @@ const OnboardingScreen = () => {
 
       {
         backgroundColor: '#ebf1fc',
-        image: <Image source={onboard3}  
+        image: <Image source={require('../images/onboard3.png')}  
         className="w-72 h-72 object-contain"
         />,
         title: '24x7 Ambulance Services',

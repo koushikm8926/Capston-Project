@@ -2,7 +2,6 @@ import { StyleSheet, Text, View,TextInput ,Image} from 'react-native'
 import React, { useState } from 'react'
 import {firebase} from '../Database/firebase';
 import { TouchableOpacity } from 'react-native';
-import { ForgotPasswordScreenGif } from '../images/images';
 
 const ForgotScreen = ({navigation}) => {
 
@@ -23,7 +22,7 @@ const ForgotScreen = ({navigation}) => {
   return (
     <View style={{backgroundColor:'#ffffff', height:1000,}}>
         <View style={{alignItems:'center',marginTop:25,}}>
-            <Image style={{height:300, width:300,}} source={ForgotPasswordScreenGif} />
+            <Image style={{height:300, width:300,}} source={require('../images/ForgotPassword.gif')} />
             <Text style={{color:'#1c386c', fontSize:34,fontWeight:'bold', }}>Reset Password</Text>
             <Text style={{textAlign:'center', marginTop:15,}}>To reset your password, enter the email address you use to sign in to the application.</Text>
         </View>

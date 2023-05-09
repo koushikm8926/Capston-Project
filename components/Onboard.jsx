@@ -2,7 +2,6 @@ import React from "react";
 import { styles } from "../styles/on-board-style";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { View, Text, TouchableOpacity, SafeAreaView, Image,StyleSheet} from "react-native";
-import { Hospitalanimation } from "../images/images";
 
 
 export default function Onboard({navigation}){
@@ -16,7 +15,7 @@ export default function Onboard({navigation}){
             </View>
 
             <View style={{alignItems:"center"}}>    
-            <Image style={{width: 400, height: 300}} source={Hospitalanimation} />
+            <Image style={{width: 400, height: 300}} source={require('../images/hospital-animation.gif')} />
             </View>
 
             <View style={styles.view2}>

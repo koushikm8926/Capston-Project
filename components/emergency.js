@@ -1,12 +1,10 @@
 import { View,StyleSheet,Image,Text, TouchableOpacity, ScrollView,Alert} from "react-native"; 
-import { avtar } from "../images/images"; 
 import Ionicons from "react-native-vector-icons/Ionicons"; 
 import MaterialIcons from "react-native-vector-icons/MaterialIcons"; 
 import * as Animatable from 'react-native-animatable';
 import { nexmoApiKey,nexmoApiSecret } from "../nexmo config";
 import * as Location from 'expo-location';
 import React, { useState, useEffect } from 'react';
-import { itching_person, smallpox_person, finger_cut } from '../images/images.js'; 
 
 export default function Emergency({navigation}){ 
     
@@ -58,7 +56,7 @@ export default function Emergency({navigation}){
 <View style={{justifyContent:'center', alignItems:'center', }} > 
     <View  style={{marginTop:10, flexDirection:'row',  }}> 
         <View > 
-            <Image source={avtar} style={styles.avtar}></Image>  
+            <Image source={require('../images/avtar.jpeg')} style={styles.avtar}></Image>  
         </View> 
         
         <View style={{flexDirection:'column', marginLeft:10, marginTop:12,}}> 
@@ -117,7 +115,7 @@ export default function Emergency({navigation}){
             <View style={{backgroundColor:'white',marginLeft:10,borderRadius:20, height:110, width:150,}}> 
             <Text style={{fontSize:20, marginLeft:20, marginTop:15 }} >I have an injury </Text> 
                 <MaterialIcons name="person" size={20} color="grey" style={{color:'red', marginTop:20, marginLeft:20}}  /> 
-                <Image source={finger_cut} style={{height:35, width:35, marginLeft:110, marginTop:-30}}></Image>  
+                <Image source={require('../images/finger_cut.png')} style={{height:35, width:35, marginLeft:110, marginTop:-30}}></Image>  
  
             </View> 
             </TouchableOpacity>
@@ -126,7 +124,7 @@ export default function Emergency({navigation}){
             <View style={{backgroundColor:'white',marginLeft:10,borderRadius:20, height:110, width:150,}}> 
             <Text style={{fontSize:20, marginLeft:20, marginTop:15 }} >I am feeling allery </Text> 
                 <MaterialIcons name="person" size={20} color="grey" style={{color:'red', marginTop:20, marginLeft:20}}  /> 
-                <Image source={itching_person} style={{height:35, width:35, marginLeft:110, marginTop:-30}}></Image>  
+                <Image source={require('../images/itching_person.png')} style={{height:35, width:35, marginLeft:110, marginTop:-30}}></Image>  
  
             </View> 
             </TouchableOpacity>  
@@ -135,7 +133,7 @@ export default function Emergency({navigation}){
             <View style={{backgroundColor:'white',marginLeft:10,borderRadius:20, height:110, width:150,}}> 
             <Text style={{fontSize:20, marginLeft:20, marginTop:15 }} >I am having smallpox </Text> 
                 <MaterialIcons name="person" size={20} color="grey" style={{color:'red', marginTop:20, marginLeft:20}}  /> 
-                <Image source={smallpox_person} style={{height:35, width:35, marginLeft:110, marginTop:-30}}></Image>  
+                <Image source={require('../images/smallpox_person.png')} style={{height:35, width:35, marginLeft:110, marginTop:-30}}></Image>  
  
             </View> 
             </TouchableOpacity>  

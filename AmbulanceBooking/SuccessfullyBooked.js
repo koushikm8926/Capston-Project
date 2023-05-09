@@ -1,6 +1,5 @@
 import { StyleSheet,Image, Text, View } from 'react-native'
 import React from 'react'
-import { paymentdone } from '../images/images'
 import { TouchableOpacity } from 'react-native'
 
 const SuccessfullyBooked = ({navigation}) => {
@@ -8,7 +7,7 @@ const SuccessfullyBooked = ({navigation}) => {
     <View style={{backgroundColor:'#ffffff', height:1000,}}>
         
         <View style={{marginTop:25,}}>
-          <Image style={{marginTop:25,}} source={paymentdone}/>
+          <Image style={{marginTop:25,}} source={require('../images/paymentdone.gif')}/>
           <Text style={{textAlign:'center',marginTop:15,fontSize:34,color:'#12d76e',fontWeight:'bold'}}>Thank You</Text>
         </View>
 

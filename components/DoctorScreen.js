@@ -1,6 +1,5 @@
 import React from "react";
 import {View, SafeAreaView, Text, TouchableOpacity, Image, ScrollView, StyleSheet} from "react-native";
-import { doctor, pregnant, sexio, baby, hair, digest, plus_sign, stethscope, teeth } from '../images/images.js'; 
 
 export default function DoctorScreen({navigation}){
   return(
@@ -15,7 +14,7 @@ export default function DoctorScreen({navigation}){
           <Text style={styles.buttonText1}>See Doctor Now</Text> 
           </TouchableOpacity>
           <Image  style={styles.image1}
-          source={doctor} />
+          source={require('../images/doctor.jpeg')} />
         </View>
 
         <View style={styles.view2} >
@@ -26,7 +25,7 @@ export default function DoctorScreen({navigation}){
 
               <Image 
               style={styles.image2}
-              source={pregnant}/>
+              source={require('../images/pregnant.png')}/>
               </TouchableOpacity>
               <Text style={{textAlign:'center' }} >Women's Health</Text>
             </View>
@@ -37,7 +36,7 @@ export default function DoctorScreen({navigation}){
 
               <Image 
               style={styles.image2}
-              source={sexio}/>
+              source={require('../images/sexio.jpeg')}/>
               </TouchableOpacity>
               <Text style={{textAlign:'center' }} >Sexology</Text>
             </View>
@@ -47,7 +46,7 @@ export default function DoctorScreen({navigation}){
 
               <Image 
               style={styles.image2}
-              source={hair}/>
+              source={require('../images/hair.jpeg')}/>
               </TouchableOpacity>
               <Text style={{textAlign:'center' }} >Skin & Hair</Text>
             </View>
@@ -58,7 +57,7 @@ export default function DoctorScreen({navigation}){
 
               <Image 
               style={styles.image2}
-              source={digest}/>
+              source={require('../images/digest.png')}/>
               </TouchableOpacity>
               <Text style={{textAlign:'center' }} >Digestion</Text>
             </View>
@@ -69,7 +68,7 @@ export default function DoctorScreen({navigation}){
 
               <Image 
               style={styles.image2}
-              source={baby}/>
+              source={require('../images/baby.jpeg')}/>
               </TouchableOpacity>
               <Text style={{textAlign:'center' }} >Child Specialist</Text>
             </View>
@@ -80,7 +79,7 @@ export default function DoctorScreen({navigation}){
 
               <Image 
               style={styles.image2}
-              source={plus_sign}/>
+              source={require('../images/plus_sign.jpeg')}/>
               </TouchableOpacity>
               <Text style={{textAlign:'center' }} >Psychiatry</Text>
             </View>
@@ -90,7 +89,7 @@ export default function DoctorScreen({navigation}){
 
               <Image 
               style={styles.image2}
-              source={stethscope}/>
+              source={require('../images/stethscope.png')}/>
               </TouchableOpacity>
               <Text style={{textAlign:'center' }} >General Physician</Text>
             </View>
@@ -101,7 +100,7 @@ export default function DoctorScreen({navigation}){
 
               <Image 
               style={styles.image2}
-              source={teeth}/>
+              source={require('../images/teeth.jpeg')}/>
               </TouchableOpacity>
               <Text style={{textAlign:'center' }} >Dental Solution</Text>
             </View>
